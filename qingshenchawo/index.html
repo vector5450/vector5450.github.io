@@ -1,0 +1,947 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>情深叉喔-叉子文化观察与器物指南</title>
+<meta name="description" content="情深叉喔是一个围绕叉子器物与用餐礼仪的内容站点，从叉齿间距、材质手感聊到餐桌上的取食顺序，记录收藏、选购与日常使用的真实经验。">
+<meta name="keywords" content="情深叉喔">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232f4f3f'/%3E%3Cpath d='M9 7v7a3 3 0 0 0 6 0V7M12 7v19M20 7c3 0 4 3 4 6s-1 5-4 5v8' stroke='%23f3ead8' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1f2a24;--ink-2:#3d4a42;--ink-3:#6a766d;
+  --paper:#f7f3ea;--paper-2:#fffdf8;--line:#d9d2c2;
+  --green:#2f4f3f;--green-2:#3f6853;--green-soft:#e3ebe4;
+  --gold:#b8862f;--gold-soft:#f4e8cf;
+  --red:#a3452f;--red-soft:#f7e2dc;
+  --radius:14px;--radius-s:8px;
+  --sp-1:6px;--sp-2:12px;--sp-3:18px;--sp-4:26px;--sp-5:38px;--sp-6:56px;
+  --shadow:0 2px 6px rgba(31,42,36,.06),0 10px 24px rgba(31,42,36,.05);
+  --fs-h1:clamp(1.7rem,4.4vw,2.7rem);
+  --fs-h2:clamp(1.25rem,2.6vw,1.6rem);
+  --fs-h3:1.06rem;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  --ann-h:38px;--head-h:62px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--font);color:var(--ink);background:var(--paper);line-height:1.78;font-size:16px;-webkit-text-size-adjust:100%}
+img{max-width:100%;display:block}
+a{color:var(--green-2);text-decoration:none}
+a:hover{text-decoration:underline}
+button{font-family:inherit}
+h1,h2,h3,h4{line-height:1.35;margin:0 0 var(--sp-2)}
+p{margin:0 0 var(--sp-2)}
+ul,ol{margin:0 0 var(--sp-2);padding-left:1.25em}
+li{margin-bottom:var(--sp-1)}
+[id]{scroll-margin-top:calc(var(--ann-h) + var(--head-h) + 14px)}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+
+/* 公告条 + 页头 吸顶组 */
+.stick{position:sticky;top:0;z-index:60}
+.ann{background:var(--green);color:#f1ece0;font-size:.82rem;height:var(--ann-h);display:flex;align-items:center;overflow:hidden}
+.ann .wrap{display:flex;gap:14px;align-items:center;white-space:nowrap;overflow:hidden}
+.ann b{color:#f6d99a;font-weight:600}
+.ann .dot{width:6px;height:6px;border-radius:50%;background:#f6d99a;flex:none}
+.ann .more{margin-left:auto;color:#d9e6dc;font-size:.78rem;flex:none}
+.head{background:rgba(255,253,248,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);height:var(--head-h)}
+.head .wrap{display:flex;align-items:center;gap:var(--sp-3);height:100%}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.05rem;color:var(--ink);letter-spacing:.02em}
+.brand:hover{text-decoration:none}
+.brand svg{flex:none}
+.nav{display:flex;gap:2px;margin-left:auto;flex-wrap:wrap}
+.nav a{padding:7px 10px;border-radius:var(--radius-s);font-size:.9rem;color:var(--ink-2)}
+.nav a:hover{background:var(--green-soft);text-decoration:none;color:var(--green)}
+.nav a.on{background:var(--green);color:#fff}
+.head-actions{display:flex;gap:8px;align-items:center}
+.search-btn{border:1px solid var(--line);background:var(--paper-2);border-radius:999px;padding:7px 14px;font-size:.85rem;color:var(--ink-2);cursor:pointer;display:flex;align-items:center;gap:6px}
+.search-btn:hover{border-color:var(--green-2);color:var(--green)}
+.menu-btn{display:none;border:1px solid var(--line);background:var(--paper-2);border-radius:var(--radius-s);width:40px;height:36px;align-items:center;justify-content:center;cursor:pointer}
+.menu-btn span{display:block;width:18px;height:2px;background:var(--ink);position:relative}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink)}
+.menu-btn span::before{top:-6px}.menu-btn span::after{top:6px}
+
+/* 搜索面板 */
+.search-panel{display:none;position:fixed;inset:0;z-index:100;background:rgba(31,42,36,.5);padding:60px 16px}
+.search-panel.open{display:block}
+.search-box{width:min(620px,100%);margin:0 auto;background:var(--paper-2);border-radius:var(--radius);padding:var(--sp-4);box-shadow:var(--shadow)}
+.search-box label{font-weight:600;display:block;margin-bottom:8px}
+.search-box input{width:100%;padding:11px 14px;font-size:1rem;border:1px solid var(--line);border-radius:var(--radius-s);background:#fff;color:var(--ink)}
+.search-results{margin-top:14px;max-height:46vh;overflow:auto;font-size:.92rem}
+.search-results li{list-style:none;padding:8px 0;border-bottom:1px dashed var(--line)}
+.search-results ul{padding:0;margin:0}
+.search-results .none{color:var(--red);padding:10px 0}
+
+/* 首屏 */
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,#eef2ea 0%,#f7f3ea 55%,#f3ecdd 100%);border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:var(--sp-5);align-items:center;padding:var(--sp-5) 0 var(--sp-6)}
+.tag{display:inline-flex;align-items:center;gap:8px;background:var(--paper-2);border:1px solid var(--line);color:var(--green);font-size:.8rem;padding:5px 12px;border-radius:999px;margin-bottom:var(--sp-3)}
+.hero h1{font-size:var(--fs-h1);letter-spacing:.02em;margin-bottom:var(--sp-3)}
+.hero .lead{font-size:1.02rem;color:var(--ink-2);max-width:34em}
+.hero-cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:var(--sp-3)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:999px;font-size:.94rem;border:1px solid transparent;cursor:pointer}
+.btn-p{background:var(--green);color:#fff}
+.btn-p:hover{background:var(--green-2);text-decoration:none}
+.btn-g{background:transparent;border-color:var(--green);color:var(--green)}
+.btn-g:hover{background:var(--green-soft);text-decoration:none}
+.hero-stats{display:flex;gap:var(--sp-4);flex-wrap:wrap;margin-top:var(--sp-4);border-top:1px solid var(--line);padding-top:var(--sp-3)}
+.hero-stats div{font-size:.82rem;color:var(--ink-3)}
+.hero-stats b{display:block;font-size:1.35rem;color:var(--green);font-variant-numeric:tabular-nums}
+.hero-art{position:relative;min-height:280px;display:flex;align-items:center;justify-content:center}
+.hero-art svg{width:100%;max-width:400px;height:auto;filter:drop-shadow(0 8px 18px rgba(47,79,63,.12))}
+
+/* 通用区块 */
+.sec{padding:var(--sp-5) 0;border-bottom:1px solid var(--line)}
+.sec:last-of-type{border-bottom:0}
+.sec-h{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--sp-3);margin-bottom:var(--sp-3);flex-wrap:wrap}
+.sec-h h2{font-size:var(--fs-h2);margin:0;position:relative;padding-left:12px}
+.sec-h h2::before{content:"";position:absolute;left:0;top:.18em;bottom:.18em;width:4px;border-radius:2px;background:var(--gold)}
+.sec-note{font-size:.83rem;color:var(--ink-3)}
+.card{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);padding:var(--sp-3);box-shadow:var(--shadow)}
+.grid{display:grid;gap:var(--sp-3)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+
+/* 领域概览 */
+.ov{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-3)}
+.ov-item{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);padding:var(--sp-3);position:relative}
+.ov-item .no{font-size:.72rem;color:var(--gold);font-weight:700;letter-spacing:.08em}
+.ov-item h3{font-size:1rem;margin:4px 0 6px}
+.ov-item p{font-size:.86rem;color:var(--ink-2);margin:0}
+
+/* 精选推荐 卡片 */
+.pick-card{display:flex;flex-direction:column;overflow:hidden;padding:0}
+.pick-card img{width:100%;height:150px;object-fit:cover}
+.pick-body{padding:var(--sp-3);display:flex;flex-direction:column;flex:1}
+.pick-body h3{font-size:1rem;margin-bottom:6px}
+.pick-body p{font-size:.86rem;color:var(--ink-2);flex:1}
+.meta{display:flex;gap:10px;font-size:.76rem;color:var(--ink-3);margin-top:10px;flex-wrap:wrap}
+.chip{display:inline-block;background:var(--green-soft);color:var(--green);border-radius:999px;padding:2px 10px;font-size:.75rem}
+.chip.gold{background:var(--gold-soft);color:#7d5a17}
+.chip.red{background:var(--red-soft);color:var(--red)}
+
+/* 最新更新 紧凑列表 */
+.updates{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.updates li{display:grid;grid-template-columns:88px 1fr auto;gap:var(--sp-2);align-items:baseline;padding:11px 4px;border-bottom:1px dashed var(--line);font-size:.92rem}
+.updates time{color:var(--ink-3);font-size:.8rem;font-variant-numeric:tabular-nums}
+.updates .tagline{font-size:.76rem;color:var(--green)}
+
+/* 分类入口 标签索引 */
+.cat-index{display:flex;flex-wrap:wrap;gap:10px}
+.cat-index a{background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:7px 16px;font-size:.88rem;color:var(--ink-2)}
+.cat-index a:hover{background:var(--green);color:#fff;border-color:var(--green);text-decoration:none}
+.cat-index a b{color:var(--gold);font-weight:600;margin-left:4px}
+
+/* 深度解析 */
+.deep{display:grid;grid-template-columns:1fr;gap:var(--sp-3);background:var(--paper-2);border:1px solid var(--line);border-left:5px solid var(--green);border-radius:var(--radius);padding:var(--sp-4)}
+.deep h2{font-size:var(--fs-h2);margin-bottom:var(--sp-2)}
+.deep h3{font-size:var(--fs-h3);margin-top:var(--sp-4);color:var(--green)}
+.deep p{color:var(--ink-2)}
+.deep .thesis{background:var(--gold-soft);border-radius:var(--radius-s);padding:var(--sp-3);border:1px dashed #d8b97a;font-size:.95rem}
+.deep .thesis strong{color:#7a5410}
+.verify{width:100%;border-collapse:collapse;font-size:.87rem;margin:var(--sp-2) 0 var(--sp-3)}
+.verify th,.verify td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.verify th{background:var(--green-soft);color:var(--green);font-weight:600;white-space:nowrap}
+.verify caption{caption-side:top;text-align:left;font-size:.8rem;color:var(--ink-3);padding-bottom:6px}
+
+/* 体验指南 编号步骤 */
+.steps{list-style:none;padding:0;margin:0;counter-reset:s}
+.steps li{counter-increment:s;position:relative;padding:0 0 var(--sp-3) 52px;margin:0}
+.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:0;width:36px;height:36px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:600;font-variant-numeric:tabular-nums}
+.steps li::after{content:"";position:absolute;left:17px;top:40px;bottom:4px;width:2px;background:var(--line)}
+.steps li:last-child::after{display:none}
+.steps h3{font-size:.98rem;margin-bottom:2px}
+.steps p{font-size:.88rem;color:var(--ink-2);margin:0}
+
+/* FAQ */
+.faq details{border:1px solid var(--line);border-radius:var(--radius-s);background:var(--paper-2);margin-bottom:10px;overflow:hidden}
+.faq summary{cursor:pointer;padding:13px 16px;font-weight:600;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.2rem;color:var(--gold);flex:none;transition:transform .18s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .ans{padding:0 16px 14px;font-size:.9rem;color:var(--ink-2);border-top:1px dashed var(--line);padding-top:12px}
+.faq summary:hover{background:var(--green-soft)}
+
+/* 评论 */
+.cmts{display:grid;gap:var(--sp-3)}
+.cmt{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);padding:var(--sp-3);position:relative}
+.cmt .who{display:flex;align-items:center;gap:9px;margin-bottom:6px}
+.avatar{width:34px;height:34px;border-radius:50%;background:var(--green-soft);color:var(--green);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem;flex:none}
+.cmt .who b{font-size:.9rem}
+.cmt .who span{font-size:.74rem;color:var(--ink-3)}
+.cmt p{font-size:.9rem;color:var(--ink-2);margin:0}
+.cmt .ref{display:inline-block;margin-top:8px;font-size:.76rem;color:var(--gold);border-bottom:1px dashed var(--gold)}
+.stars{color:var(--gold);font-size:.8rem;letter-spacing:1px}
+
+/* 相关资讯 双栏 */
+.news{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-3)}
+.news-item{display:grid;grid-template-columns:1fr;gap:4px;padding-bottom:var(--sp-2);border-bottom:1px dashed var(--line)}
+.news-item h3{font-size:.96rem;margin:0}
+.news-item p{font-size:.85rem;color:var(--ink-2);margin:0}
+.news-item time{font-size:.75rem;color:var(--ink-3)}
+
+/* 相关推荐 标签 */
+.reco{display:flex;flex-wrap:wrap;gap:9px}
+.reco a{background:var(--paper-2);border:1px solid var(--line);border-bottom:2px solid var(--gold);border-radius:var(--radius-s);padding:7px 14px;font-size:.85rem;color:var(--ink-2)}
+.reco a:hover{background:var(--gold-soft);color:#7a5410;text-decoration:none}
+
+/* 榜单 时间线 */
+.rank{list-style:none;padding:0;margin:0;counter-reset:r}
+.rank li{counter-increment:r;display:grid;grid-template-columns:34px 1fr auto;gap:var(--sp-2);align-items:center;padding:11px 4px;border-bottom:1px dashed var(--line);font-size:.92rem}
+.rank li::before{content:counter(r);width:26px;height:26px;border-radius:7px;background:var(--green-soft);color:var(--green);display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700}
+.rank li:nth-child(1)::before{background:var(--gold);color:#fff}
+.rank .score{font-size:.78rem;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.tl{list-style:none;padding:0 0 0 22px;margin:0;position:relative;border-left:2px solid var(--line)}
+.tl li{position:relative;padding-bottom:var(--sp-3)}
+.tl li::before{content:"";position:absolute;left:-29px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--gold);border:2px solid var(--paper-2)}
+.tl time{font-size:.76rem;color:var(--ink-3);display:block}
+.tl b{font-size:.92rem}
+.tl p{font-size:.85rem;color:var(--ink-2);margin:2px 0 0}
+
+/* 两位互动栏 */
+.poll{display:grid;gap:10px}
+.poll-row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;font-size:.9rem}
+.bar{height:9px;border-radius:5px;background:var(--green-soft);overflow:hidden;grid-column:1/3}
+.bar i{display:block;height:100%;background:var(--green-2);border-radius:5px}
+.tips textarea{width:100%;min-height:64px;padding:9px 12px;font-family:inherit;font-size:.9rem;border:1px solid var(--line);border-radius:var(--radius-s);background:#fff;color:var(--ink);resize:vertical}
+.tips button{margin-top:8px}
+
+/* 侧栏 / 布局 */
+.main-wrap{display:grid;grid-template-columns:1fr 300px;gap:var(--sp-4);align-items:start;padding:var(--sp-5) 0}
+.side{position:sticky;top:calc(var(--ann-h) + var(--head-h) + 16px);display:grid;gap:var(--sp-3)}
+.side .card h3{font-size:.95rem;margin-bottom:10px}
+.side-nav{list-style:none;padding:0;margin:0}
+.side-nav a{display:block;font-size:.87rem;padding:6px 10px;border-radius:6px;border-left:3px solid transparent;color:var(--ink-2)}
+.side-nav a:hover{background:var(--green-soft);text-decoration:none}
+.side-nav a.active{background:var(--green-soft);border-left-color:var(--green);color:var(--green);font-weight:600}
+
+/* 页脚 */
+.foot{background:#22352b;color:#cfd8cf;padding:var(--sp-5) 0 var(--sp-3);font-size:.88rem}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:var(--sp-4)}
+.foot h4{color:#f6d99a;font-size:.85rem;letter-spacing:.06em;margin-bottom:10px}
+.foot a{color:#cfd8cf}
+.foot a:hover{color:#fff}
+.foot ul{list-style:none;padding:0;margin:0}
+.foot li{margin-bottom:7px}
+.foot .fbrand{display:flex;align-items:center;gap:9px;color:#fff;font-weight:700;font-size:1rem;margin-bottom:8px}
+.foot .pos{font-size:.85rem;color:#a9b8ac;max-width:26em}
+.foot-bottom{border-top:1px solid #3a5044;margin-top:var(--sp-4);padding-top:var(--sp-3);display:flex;justify-content:space-between;gap:var(--sp-2);flex-wrap:wrap;font-size:.78rem;color:#8fa094}
+
+/* 回到顶部 */
+.top-btn{position:fixed;right:18px;bottom:22px;width:44px;height:44px;border-radius:50%;border:1px solid var(--green-2);background:var(--paper-2);color:var(--green);cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:var(--shadow);z-index:70}
+.top-btn.show{display:flex}
+.top-btn:hover{background:var(--green);color:#fff}
+
+/* 响应式 */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr;gap:var(--sp-3);padding:var(--sp-4) 0 var(--sp-5)}
+  .hero-art{order:-1;min-height:0}
+  .hero-art svg{max-width:260px}
+  .main-wrap{grid-template-columns:1fr;padding:var(--sp-4) 0}
+  .side{position:static;order:2}
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(2,1fr)}
+  .ov{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .nav{display:none;position:absolute;top:var(--head-h);left:0;right:0;background:var(--paper-2);border-bottom:1px solid var(--line);flex-direction:column;padding:10px 16px;gap:2px;box-shadow:var(--shadow)}
+  .nav.open{display:flex}
+  .nav a{padding:11px 10px;font-size:.95rem}
+  .menu-btn{display:flex}
+  .head{position:relative}
+  .head .wrap{height:var(--head-h)}
+  .search-btn span{display:none}
+  .g2,.g3,.g4,.ov,.news{grid-template-columns:1fr}
+  .updates li{grid-template-columns:1fr;gap:2px}
+  .updates .tagline{justify-self:start}
+  .foot-grid{grid-template-columns:1fr}
+  .sec{padding:var(--sp-4) 0}
+  .deep{padding:var(--sp-3)}
+  .rank li{grid-template-columns:28px 1fr auto;font-size:.88rem}
+}
+@media (max-width:380px){
+  .hero h1{font-size:1.5rem}
+  .brand span{font-size:.95rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .card:hover,.pick-card:hover{transform:none!important}
+}
+.card.hoverable:hover,.pick-card:hover{transform:translateY(-3px);transition:transform .18s}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="stick">
+  <div class="ann" role="region" aria-label="站内更新公告">
+    <div class="wrap">
+      <span class="dot" aria-hidden="true"></span>
+      <span><b>情深叉喔</b> · 11月6日上线「叉齿间距实测」第三期，补入12把主餐叉的齿距与握感对照。</span>
+      <a class="more" href="/#updates">查看更新 →</a>
+    </div>
+  </div>
+  <header class="head">
+    <div class="wrap">
+      <a class="brand" href="/#top" aria-label="情深叉喔 首页">
+        <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#2f4f3f"/>
+          <path d="M9 7v7a3 3 0 0 0 6 0V7M12 7v19M20 7c3 0 4 3 4 6s-1 5-4 5v8" stroke="#f3ead8" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span>情深叉喔</span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav" aria-label="展开导航菜单"><span aria-hidden="true"></span></button>
+      <nav class="nav" id="mainNav" aria-label="主题导航">
+        <a href="/#overview" class="on">器物概览</a>
+        <a href="/#picks">精选推荐</a>
+        <a href="/#updates">最新更新</a>
+        <a href="/#cats">分类入口</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#comments">用户评论</a>
+      </nav>
+      <div class="head-actions">
+        <button class="search-btn" id="searchOpen" aria-haspopup="dialog">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <span>搜索器物词条</span>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="tag">叉子器物观察 · 第 128 周</span>
+        <h1 id="heroTitle">情深叉喔</h1>
+        <p class="lead">从一把主餐叉的齿距、叉尖圆钝度，到西餐礼仪里“叉背朝上还是朝下”的分歧，这里记录叉子作为实用器物的选择依据。内容来自拆解、称重、比对与餐桌实拍，不做玄学。</p>
+        <div class="hero-cta">
+          <a class="btn btn-p" href="/#deep">读深度解析</a>
+          <a class="btn btn-g" href="/#guide">看体验指南</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>12</b>把主餐叉实物对照</div>
+          <div><b>46</b>个器物词条</div>
+          <div><b>9</b>种材质差异记录</div>
+          <div><b>2026.11.06</b>最近一次实测更新</div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 360" role="img">
+          <defs>
+            <linearGradient id="gA" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#dfe8dc"/><stop offset="1" stop-color="#f6efdf"/>
+            </linearGradient>
+          </defs>
+          <circle cx="210" cy="180" r="150" fill="url(#gA)"/>
+          <rect x="112" y="64" width="196" height="232" rx="18" fill="#fffdf8" stroke="#d9d2c2"/>
+          <path d="M150 96v34a13 13 0 0 0 26 0V96M163 96v104" stroke="#2f4f3f" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <path d="M232 96c14 0 20 14 20 28s-6 22-20 22v54" stroke="#b8862f" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <path d="M128 236h164M128 252h120M128 268h96" stroke="#d9d2c2" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="296" cy="104" r="14" fill="none" stroke="#a3452f" stroke-width="3"/>
+          <path d="M290 104l4 4 8-8" stroke="#a3452f" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap main-wrap">
+    <div>
+      <!-- 1 领域概览 -->
+      <section class="sec" id="overview" aria-labelledby="hOverview">
+        <div class="sec-h">
+          <h2 id="hOverview">器物概览：叉子按什么维度分</h2>
+          <span class="sec-note">四个维度先分清</span>
+        </div>
+        <div class="ov">
+          <div class="ov-item">
+            <span class="no">01 / 齿数</span>
+            <h3>两齿到五齿</h3>
+            <p>甜点叉多为三齿，主餐叉四齿居多，四齿以上见于分餐与海鲜叉。齿数越多，夹取细面时越稳，但夹整块肉类时反而分散受力。</p>
+          </div>
+          <div class="ov-item">
+            <span class="no">02 / 齿距</span>
+            <h3>4—9 毫米</h3>
+            <p>齿距决定面条滑脱率。器具评测栏目用截面卡尺量了 12 把主餐叉，齿距 6—7 毫米区间在拌面时表现最稳定。</p>
+          </div>
+          <div class="ov-item">
+            <span class="no">03 / 材质</span>
+            <h3>18/10 与 18/0</h3>
+            <p>18/10 不锈钢含镍 10%，耐蚀与光泽更好；18/0 含镍极低，磁性强、价位低，长期接触盐分料理更容易出现细密锈点。</p>
+          </div>
+          <div class="ov-item">
+            <span class="no">04 / 工艺</span>
+            <h3>冲压与锻造</h3>
+            <p>锻造叉在手柄颈部更厚，握持抗弯；冲压叉轻薄、成本低。两者在外观上接近，掂重与看颈线是最直接的区分办法。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2 精选推荐 -->
+      <section class="sec" id="picks" aria-labelledby="hPicks">
+        <div class="sec-h">
+          <h2 id="hPicks">精选内容推荐</h2>
+          <a href="/#cats" style="font-size:.85rem">按分类浏览 →</a>
+        </div>
+        <div class="grid g3">
+          <article class="card pick-card hoverable">
+            <img src="https://picsum.photos/seed/fork-detail-01/480/300" width="480" height="300" loading="lazy" alt="桌上并排摆放的四齿不锈钢主餐叉特写" style="object-fit:cover">
+            <div class="pick-body">
+              <h3>主餐叉齿距实测：6 毫米与 8 毫米差在哪</h3>
+              <p>同一份意面，用齿距 6.2 毫米与 8.1 毫米的两把叉各取十次，统计掉落条数。结论比想象中具体。</p>
+              <div class="meta"><span class="chip">实测</span><span>11月5日</span><span>1,842 次阅读</span></div>
+            </div>
+          </article>
+          <article class="card pick-card hoverable">
+            <img src="https://picsum.photos/seed/fork-forge-02/480/300" width="480" height="300" loading="lazy" alt="锻造叉柄部与冲压叉对比平放桌面" style="object-fit:cover">
+            <div class="pick-body">
+              <h3>锻造叉和冲压叉，掂一掂就能分辨</h3>
+              <p>颈线厚度、总重、跌落声音三项对照，附一张按克数排序的对照表，买前不必全靠手感。</p>
+              <div class="meta"><span class="chip gold">选购</span><span>11月3日</span><span>2,310 次阅读</span></div>
+            </div>
+          </article>
+          <article class="card pick-card hoverable">
+            <img src="https://picsum.photos/seed/table-etiq-03/480/300" width="480" height="300" loading="lazy" alt="西餐桌上叉子与刀摆放位置示意" style="object-fit:cover">
+            <div class="pick-body">
+              <h3>叉背朝上还是朝下：一场餐桌礼仪的分歧</h3>
+              <p>英式与美式两种摆法各有说法，查了三本 2000 年后出版的礼仪手册，说法并不统一。</p>
+              <div class="meta"><span class="chip red">礼仪</span><span>10月29日</span><span>3,067 次阅读</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3 最新更新 -->
+      <section class="sec" id="updates" aria-labelledby="hUpdates">
+        <div class="sec-h">
+          <h2 id="hUpdates">最新更新</h2>
+          <span class="sec-note">更新截至 2026-11-08</span>
+        </div>
+        <ul class="updates">
+          <li>
+            <time datetime="2026-11-07">11月7日</time>
+            <span>补充「海鲜叉」词条：两齿短柄的取蚝用法与常见拿错场景</span>
+            <span class="tagline">词条</span>
+          </li>
+          <li>
+            <time datetime="2026-11-06">11月6日</time>
+            <span>叉齿间距实测第三期上线，录入 12 把主餐叉齿距、总重、颈厚</span>
+            <span class="tagline">实测</span>
+          </li>
+          <li>
+            <time datetime="2026-11-04">11月4日</time>
+            <span>回应读者提问：18/0 不锈钢放洗碗机后出现锈点，是材质问题还是使用问题</span>
+            <span class="tagline">问答</span>
+          </li>
+          <li>
+            <time datetime="2026-11-01">11月1日</time>
+            <span>餐具护理清单更新，加入柠檬酸浸泡与擦干顺序两项操作细节</span>
+            <span class="tagline">指南</span>
+          </li>
+          <li>
+            <time datetime="2026-10-26">10月26日</time>
+            <span>「儿童训练叉」条目补入圆头与钝角两种设计的握持反馈</span>
+            <span class="tagline">词条</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 4 分类入口 -->
+      <section class="sec" id="cats" aria-labelledby="hCats">
+        <div class="sec-h">
+          <h2 id="hCats">分类入口</h2>
+          <span class="sec-note">按用途与场景</span>
+        </div>
+        <div class="cat-index">
+          <a href="/#picks">主餐叉<b>18</b></a>
+          <a href="/#picks">甜点叉<b>9</b></a>
+          <a href="/#picks">海鲜叉<b>6</b></a>
+          <a href="/#guide">儿童训练叉<b>7</b></a>
+          <a href="/#deep">18/10 不锈钢叉<b>11</b></a>
+          <a href="/#deep">锻造叉柄<b>5</b></a>
+          <a href="/#guide">洗碗机洗叉<b>8</b></a>
+          <a href="/#comments">叉子礼仪<b>12</b></a>
+          <a href="/#faq">叉齿间距<b>4</b></a>
+          <a href="/#updates">户外野餐叉<b>6</b></a>
+          <a href="/#reco">旧叉修复<b>3</b></a>
+        </div>
+      </section>
+
+      <!-- 5 深度解析 -->
+      <section class="sec" id="deep" aria-labelledby="hDeep">
+        <div class="deep">
+          <h2 id="hDeep">深度解析：好叉子不靠贵，靠齿距与颈厚两项数字</h2>
+          <p class="thesis"><strong>判断：</strong>日常主餐叉的实用差异，八成落在齿距与颈部厚度两项可量指标上，花纹与品牌标只影响观感。理由来自 11 月 6 日实测的 12 把叉：齿距跨度 4.8—9.3 毫米，颈厚跨度 2.1—4.6 毫米，握感评分与价格的相关性并不高。</p>
+
+          <h3>一、齿距 6—7 毫米为何更稳：三组取面对照</h3>
+          <p>把 12 把主餐叉分成三组：齿距 5 毫米以下 3 把、6—7 毫米 5 把、8 毫米以上 4 把。统一用 180 克煮熟直面，各取 20 次，掉落条数取中位数。结果：5 毫米以下组中位掉落 4 条，6—7 毫米组 1 条，8 毫米以上组 3 条。窄齿距卡面条更牢，但夹整块鸡胸时叉齿容易插入过深，抬叉时肉块翻面；8 毫米以上组在肉类上更稳，面条上明显吃亏。</p>
+
+          <h3>二、颈厚 2.8 毫米是一条分水岭</h3>
+          <p>实测中，颈厚低于 2.5 毫米的 4 把叉，在叉起 200 克牛排后横向晃动幅度均超过 6 度；颈厚 2.8 毫米以上的 6 把，晃动幅度在 3 度以内。这条数字与是否锻造相关，但不完全对应——有一把冲压叉颈厚 3.0 毫米，表现与锻造款接近，售价却只有三分之一。反过来说，锻造不等于一定抗弯，2.6 毫米以下的锻造款一样会晃。</p>
+
+          <table class="verify">
+            <caption>可核对结构：12 把主餐叉的实测摘要（2026-11-06 实测，按颈厚排序）</caption>
+            <thead>
+              <tr><th>样品</th><th>齿距</th><th>颈厚</th><th>总重</th><th>面条掉落中位</th><th>牛排晃动</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>A（18/10 锻造）</td><td>6.3 mm</td><td>4.6 mm</td><td>62 g</td><td>1 条</td><td>2.1°</td></tr>
+              <tr><td>B（18/10 锻造）</td><td>6.8 mm</td><td>3.9 mm</td><td>57 g</td><td>1 条</td><td>2.6°</td></tr>
+              <tr><td>C（冲压）</td><td>6.5 mm</td><td>3.0 mm</td><td>44 g</td><td>2 条</td><td>2.9°</td></tr>
+              <tr><td>D（18/0 冲压）</td><td>8.4 mm</td><td>2.2 mm</td><td>38 g</td><td>3 条</td><td>6.4°</td></tr>
+            </tbody>
+          </table>
+
+          <h3>三、“叉背朝上”的分歧：三本手册三种说法</h3>
+          <p>2003 年一本英式礼仪手册写“叉齿朝下、叉背朝上放置为暂停信号”；2011 年一本美式餐桌指南则主张叉齿朝上、与刀成八字。2020 年后出版的两本中文礼仪读本直接沿用美式写法，未提英式差异。这属于说法差异，不是事实错误：两套体系各自内部自洽，混用才会让人误读为“已用完”。在正式场合，跟着同桌主人一致比跟着手册更稳妥。</p>
+
+          <h3>四、所谓“磁性强就是劣质”需要撤回一半</h3>
+          <p>18/0 不锈钢磁性强，是成分决定的，不能直接推为质量差。11 月 4 日读者反馈洗碗机后出现锈点，属于事实层面；回应是：锈点更可能与残留盐分、长时间湿润有关。转述一句常被引用的说法“18/0 只能做装饰”——这属于推测，缺乏工艺条件限定。可核对的做法是：用同一批 18/0 叉分两半，一半擦干存放，一半带水入架，两周后对照锈点数量。</p>
+        </div>
+      </section>
+
+      <!-- 6 体验指南 -->
+      <section class="sec" id="guide" aria-labelledby="hGuide">
+        <div class="sec-h">
+          <h2 id="hGuide">体验指南：买回来怎么用、怎么养</h2>
+          <span class="sec-note">五步操作</span>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>开箱先量齿距</h3>
+            <p>用普通直尺量相邻两齿中心距，与页面实测表对照。误差超过 0.5 毫米，说明批次不同，握感结论要打折。</p>
+          </li>
+          <li>
+            <h3>首洗用温水加中性洗涤剂</h3>
+            <p>出厂抛光蜡残留会影响入口味道，温水泡 5 分钟后软布顺齿向擦，不用钢丝球。</p>
+          </li>
+          <li>
+            <h3>面条、肉类分叉使用</h3>
+            <p>齿距 6—7 毫米的叉专用于长面类；8 毫米以上留给整块肉与沙拉。混用会放大两者的短处。</p>
+          </li>
+          <li>
+            <h3>洗碗机摆放刃口朝下、叉齿朝上</h3>
+            <p>避免相互摩擦，也避免篮底积水长期接触颈线。18/0 款洗后立刻取出擦干。</p>
+          </li>
+          <li>
+            <h3>每季度检查颈线与齿尖</h3>
+            <p>颈线发暗、齿尖起毛刺就进入更换观察期。用指甲沿齿边滑一遍，能摸到毛刺的都不要再入口。</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 7 FAQ -->
+      <section class="sec" id="faq" aria-labelledby="hFaq">
+        <div class="sec-h">
+          <h2 id="hFaq">常见问答</h2>
+          <span class="sec-note">按提问频次排列</span>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>主餐叉齿距多少毫米适合吃意面？</summary>
+            <div class="ans">齿距 6—7 毫米是实测里最稳的区间。齿距过窄会插深、翻面时面条成团；过宽则抬叉即滑。选购时量相邻两齿中心距，不要目测。</div>
+          </details>
+          <details>
+            <summary>18/10 和 18/0 不锈钢叉，日常用哪个更合适？</summary>
+            <div class="ans">18/10 含镍更高，耐蚀与光泽更好，预算允许就选它。18/0 价位低、磁性强，不代表不能用；洗后擦干、避免长时间浸泡盐水，能显著减少锈点。</div>
+          </details>
+          <details>
+            <summary>叉子放洗碗机后出现锈点，是材质差吗？</summary>
+            <div class="ans">先看使用环节。盐分残留、篮底积水、与铁质锅具同洗，都可能引发锈点。用同批叉分两组对照两周，能判断是材质问题还是环境问题。</div>
+          </details>
+          <details>
+            <summary>西餐里叉子暂放和用完的信号怎么区分？</summary>
+            <div class="ans">英式写法是叉齿朝下、叉背朝上表示暂停；美式写法是叉齿朝上、与刀成八字。两套体系并存，场合里跟着同桌主人一致，比背手册可靠。</div>
+          </details>
+          <details>
+            <summary>儿童训练叉选圆头还是钝角？</summary>
+            <div class="ans">圆头适合 2—3 岁初学阶段，刺取失败率高但更安全；钝角四齿适合 4 岁以上，能自己叉起块状食物，家长仍需在旁边看护。</div>
+          </details>
+          <details>
+            <summary>锻造叉一定比冲压叉耐用吗？</summary>
+            <div class="ans">不一定。颈厚才是抗弯关键，实测里有一把冲压叉颈厚 3.0 毫米，表现接近锻造款。买前看颈线厚度与总重，比看工艺标签更有用。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 8 用户评论 -->
+      <section class="sec" id="comments" aria-labelledby="hComments">
+        <div class="sec-h">
+          <h2 id="hComments">用户评论</h2>
+          <span class="sec-note">11月5—7日留言摘录</span>
+        </div>
+        <div class="cmts">
+          <article class="cmt">
+            <div class="who"><span class="avatar">陈</span><div><b>陈默</b><br><span>11月7日 · 来自杭州</span></div></div>
+            <p>按齿距表买了 6.4 毫米那把，拌意面确实不怎么掉。但叉背花纹太深，洗碗机洗两次就积了一层白垢，得用旧牙刷抠。</p>
+            <span class="ref">指向条目：主餐叉齿距实测</span>
+          </article>
+          <article class="cmt">
+            <div class="who"><span class="avatar">L</span><div><b>Lin_周</b><br><span>11月6日 · 来自成都</span></div></div>
+            <p>颈厚这条我认。家里那把赠品叉子叉牛排，一晃能到七八度，以前以为是手劲问题，量了才发现颈厚只有 2.1 毫米。</p>
+            <span class="ref">指向条目：颈厚 2.8 毫米分水岭</span>
+          </article>
+          <article class="cmt">
+            <div class="who"><span class="avatar">吴</span><div><b>吴桐</b><br><span>11月6日 · 来自上海</span></div></div>
+            <div class="stars" aria-label="评分 3 星">★★★☆☆</div>
+            <p>礼仪那篇写两套体系并存，讲得没错，但没给结论。我请客户吃饭那次，同桌有人按英式、有人按美式，最后都以为我吃完了。实操建议能不能再具体点。</p>
+            <span class="ref">指向条目：叉背朝上还是朝下</span>
+          </article>
+          <article class="cmt">
+            <div class="who"><span class="avatar">郑</span><div><b>郑一鸣</b><br><span>11月5日 · 来自广州</span></div></div>
+            <p>18/0 洗出锈点那期回应挺实在，没有一口咬定材质问题。我就是照着分两组对照做的，擦干那组两周零锈点。</p>
+            <span class="ref">指向条目：洗碗机锈点回应</span>
+          </article>
+          <article class="cmt">
+            <div class="who"><span class="avatar">阿</span><div><b>阿黛</b><br><span>11月5日 · 来自北京</span></div></div>
+            <p>儿童训练叉那段看得有点无语，圆头叉子叉葡萄根本叉不住，我家娃三岁直接放弃改用勺子。安全归安全，实用性也得写进去吧。</p>
+            <span class="ref">指向条目：儿童训练叉词条</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- 9 相关资讯 -->
+      <section class="sec" id="news" aria-labelledby="hNews">
+        <div class="sec-h">
+          <h2 id="hNews">相关资讯</h2>
+          <span class="sec-note">器物与餐桌近况</span>
+        </div>
+        <div class="news">
+          <article class="news-item">
+            <h3>某连锁餐厅 10 月起改用短柄四齿叉</h3>
+            <p>据其 10 月 15 日门店物料通知，主餐叉换为柄长 17 厘米款，理由是摆放密度提高后桌面更紧凑。</p>
+            <time datetime="2026-10-20">10月20日</time>
+          </article>
+          <article class="news-item">
+            <h3>餐具回收计划扩大到 12 个城市</h3>
+            <p>旧不锈钢叉可交门店回收点，按重量折算积分。10 月 22 日起执行，具体门店以各家公告为准。</p>
+            <time datetime="2026-10-22">10月22日</time>
+          </article>
+          <article class="news-item">
+            <h3>《西餐礼仪图解》修订版上市</h3>
+            <p>10 月版本把叉子暂放信号改为双说法并列，与同书 2015 年版的单一口径不同。</p>
+            <time datetime="2026-10-25">10月25日</time>
+          </article>
+          <article class="news-item">
+            <h3>野餐叉团购批次出现柄部色差</h3>
+            <p>有买家在 11 月 2 日晒图对比，同批 18/10 款柄面光泽不一致，商家回应为抛光批次差异。</p>
+            <time datetime="2026-11-02">11月2日</time>
+          </article>
+        </div>
+      </section>
+
+      <!-- 10 互动：投票 -->
+      <section class="sec" id="poll" aria-labelledby="hPoll">
+        <div class="sec-h">
+          <h2 id="hPoll">本周小投票：你更在意哪一项</h2>
+          <span class="sec-note">匿名，可随时改选</span>
+        </div>
+        <div class="card">
+          <div class="poll" id="pollBox">
+            <div class="poll-row"><span>齿距是否顺手</span><span data-pct="46">46%</span></div>
+            <div class="bar"><i style="width:46%"></i></div>
+            <div class="poll-row"><span>颈厚是否抗弯</span><span data-pct="31">31%</span></div>
+            <div class="bar"><i style="width:31%"></i></div>
+            <div class="poll-row"><span>洗碗机后是否起锈点</span><span data-pct="14">14%</span></div>
+            <div class="bar"><i style="width:14%"></i></div>
+            <div class="poll-row"><span>花纹与品牌标</span><span data-pct="9">9%</span></div>
+            <div class="bar"><i style="width:9%"></i></div>
+          </div>
+          <p class="sec-note" style="margin:10px 0 0">截至 11 月 8 日共 1,204 票。</p>
+        </div>
+      </section>
+
+      <!-- 11 榜单 -->
+      <section class="sec" id="rank" aria-labelledby="hRank">
+        <div class="sec-h">
+          <h2 id="hRank">推荐榜：12 把主餐叉的综合排序</h2>
+          <span class="sec-note">按三项加权，非价格排序</span>
+        </div>
+        <ol class="rank">
+          <li><span>A 款 18/10 锻造叉 · 齿距 6.3 mm</span><span class="score">综合 9.1</span></li>
+          <li><span>B 款 18/10 锻造叉 · 齿距 6.8 mm</span><span class="score">综合 8.8</span></li>
+          <li><span>C 款冲压叉 · 颈厚 3.0 mm</span><span class="score">综合 8.2</span></li>
+          <li><span>E 款甜点叉 · 三齿 5.1 mm</span><span class="score">综合 7.7</span></li>
+          <li><span>F 款海鲜叉 · 两齿短柄</span><span class="score">综合 7.4</span></li>
+        </ol>
+        <p class="sec-note">排序权重：齿距匹配度 40%、颈厚 40%、清洁便利 20%。</p>
+      </section>
+
+      <!-- 12 时间线 -->
+      <section class="sec" id="timeline" aria-labelledby="hTime">
+        <div class="sec-h">
+          <h2 id="hTime">一颗锈点的两周时间线</h2>
+          <span class="sec-note">18/0 不锈钢叉对照记录</span>
+        </div>
+        <ul class="tl">
+          <li><time datetime="2026-10-24">10月24日</time><b>入组</b><p>同批 18/0 叉 8 把，分擦干组与带水组各 4 把。</p></li>
+          <li><time datetime="2026-10-27">10月27日</time><b>带水组首次观察到浅色斑点</b><p>位置集中在齿根与颈线交界。</p></li>
+          <li><time datetime="2026-11-01">11月1日</time><b>两组差异明显</b><p>带水组 4 把均有锈点，擦干组 0 把。</p></li>
+          <li><time datetime="2026-11-05">11月5日</time><b>结论记录</b><p>锈点出现与存放湿度关联更大，与钢种磁性强弱无直接对应。</p></li>
+        </ul>
+      </section>
+
+      <!-- 13 相关推荐 -->
+      <section class="sec" id="reco" aria-labelledby="hReco">
+        <div class="sec-h">
+          <h2 id="hReco">相关推荐</h2>
+        </div>
+        <div class="reco">
+          <a href="/#deep">主餐叉齿距多少毫米合适</a>
+          <a href="/#deep">18/10 与 18/0 不锈钢区别</a>
+          <a href="/#guide">叉子洗碗机清洗顺序</a>
+          <a href="/#faq">西餐叉子暂停信号</a>
+          <a href="/#guide">儿童训练叉怎么选</a>
+          <a href="/#timeline">不锈钢叉起锈点原因</a>
+          <a href="/#picks">锻造叉和冲压叉对比</a>
+          <a href="/#rank">主餐叉推荐榜</a>
+        </div>
+      </section>
+
+      <!-- 14 补充：创作者证言/引语卡 -->
+      <section class="sec" id="voice" aria-labelledby="hVoice">
+        <div class="sec-h">
+          <h2 id="hVoice">餐桌边的一句话</h2>
+        </div>
+        <div class="grid g2">
+          <blockquote class="card" style="border-left:5px solid var(--gold);margin:0">
+            <p style="font-size:.95rem">“食堂那把用了六年的叉子，齿尖早就磨圆，可它叉土豆块从来没让我失望。贵的不一定顺，顺的是量出来那组数。”</p>
+            <p class="sec-note" style="margin:8px 0 0">—— 小馆后厨 何师傅，11月3日受访</p>
+          </blockquote>
+          <blockquote class="card" style="border-left:5px solid var(--green);margin:0">
+            <p style="font-size:.95rem">“给客人换叉子前，我会先自己叉一块牛排晃两下。颈线软不软，手比参数先知道。”</p>
+            <p class="sec-note" style="margin:8px 0 0">—— 西餐厅前厅 林女士，11月6日受访</p>
+          </blockquote>
+        </div>
+      </section>
+    </div>
+
+    <!-- 侧栏 -->
+    <aside class="side" aria-label="侧栏导航">
+      <nav class="card" aria-label="本页目录">
+        <h3>本页目录</h3>
+        <ul class="side-nav" id="sideNav">
+          <li><a href="/#overview">器物概览</a></li>
+          <li><a href="/#picks">精选内容推荐</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#cats">分类入口</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#rank">推荐榜</a></li>
+          <li><a href="/#timeline">时间线</a></li>
+          <li><a href="/#reco">相关推荐</a></li>
+        </ul>
+      </nav>
+      <div class="card">
+        <h3>示例数据说明</h3>
+        <p style="font-size:.83rem;color:var(--ink-2);margin:0">页内 12 把主餐叉的齿距、颈厚与握感评分为示例样本，用于说明判断方法，具体商品请以实物为准。更新日期对应正文条目，可逐条核对。</p>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="foot" id="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="fbrand">
+          <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="8" fill="#f3ead8"/>
+            <path d="M9 7v7a3 3 0 0 0 6 0V7M12 7v19M20 7c3 0 4 3 4 6s-1 5-4 5v8" stroke="#2f4f3f" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </svg>
+          情深叉喔
+        </div>
+        <p class="pos">记录锯齿角度、颈线厚度与餐桌取食顺序，让每一次抬叉都有据可查。</p>
+      </div>
+      <div>
+        <h4>栏目</h4>
+        <ul>
+          <li><a href="/#overview">器物概览</a></li>
+          <li><a href="/#picks">精选推荐</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>互动</h4>
+        <ul>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#poll">本周投票</a></li>
+          <li><a href="/#rank">推荐榜</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <ul>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#timeline">时间线记录</a></li>
+          <li><a href="/#reco">相关推荐</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 情深叉喔 · 内容为示例样本与公开信息整理，仅供参考。</span>
+      <span>页面更新：2026-11-08（对应「最新更新」条目）</span>
+    </div>
+  </div>
+</footer>
+
+<button class="top-btn" id="topBtn" aria-label="回到顶部" title="回到顶部">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 20V5M5.5 11 12 4.5 18.5 11"/></svg>
+</button>
+
+<!-- 搜索面板 -->
+<div class="search-panel" id="searchPanel" role="dialog" aria-modal="true" aria-label="站内搜索">
+  <div class="search-box">
+    <label for="searchInput">搜索词条：齿距、颈厚、18/10、洗碗机、训练叉…</label>
+    <input id="searchInput" type="search" autocomplete="off" placeholder="输入关键词，例如「齿距」">
+    <div class="search-results" id="searchResults" aria-live="polite"></div>
+    <div style="margin-top:12px;text-align:right"><button class="btn btn-g" id="searchClose">关闭</button></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var ann=document.querySelector('.ann');
+  var root=document.documentElement;
+  if(ann){root.style.setProperty('--ann-h',ann.offsetHeight+'px')}
+
+  var menuBtn=document.getElementById('menuBtn');
+  var nav=document.getElementById('mainNav');
+  if(menuBtn&&nav){
+    menuBtn.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    nav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'&&window.innerWidth<=760){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  // 滚动高亮
+  var links=[].slice.call(document.querySelectorAll('.side-nav a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href').replace('/#','#'))}).filter(Boolean);
+  var navTop=[].slice.call(document.querySelectorAll('.nav a'));
+  function onScroll(){
+    var y=window.scrollY+140, cur=null;
+    secs.forEach(function(s){ if(s.offsetTop<=y) cur=s.id; });
+    links.forEach(function(a){
+      var target=a.getAttribute('href').replace('/#','');
+      a.classList.toggle('active', target===cur || (cur===null && target==='overview'));
+    });
+    var topBtn=document.getElementById('topBtn');
+    topBtn.classList.toggle('show', window.scrollY>480);
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+
+  document.getElementById('topBtn').addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  // 搜索
+  var panel=document.getElementById('searchPanel');
+  var input=document.getElementById('searchInput');
+  var results=document.getElementById('searchResults');
+  var data=[
+    {t:'主餐叉齿距实测：6 毫米与 8 毫米差在哪',k:'齿距 主餐叉 意面 实测',u:'/#picks'},
+    {t:'锻造叉和冲压叉，掂一掂就能分辨',k:'锻造 冲压 颈厚 选购',u:'/#picks'},
+    {t:'叉背朝上还是朝下：一场餐桌礼仪的分歧',k:'礼仪 叉背 英式 美式',u:'/#picks'},
+    {t:'18/10 与 18/0 不锈钢叉区别',k:'18/10 18/0 不锈钢 含镍 锈点',u:'/#deep'},
+    {t:'主餐叉齿距多少毫米适合吃意面',k:'齿距 意面 FAQ',u:'/#faq'},
+    {t:'叉子洗碗机后起锈点原因',k:'洗碗机 锈点 18/0 擦干',u:'/#faq'},
+    {t:'儿童训练叉怎么选：圆头与钝角',k:'儿童 训练叉 圆头 钝角',u:'/#guide'},
+    {t:'体验指南：买回来怎么用、怎么养',k:'体验 指南 清洗 保养',u:'/#guide'},
+    {t:'推荐榜：12 把主餐叉综合排序',k:'推荐榜 排序 综合',u:'/#rank'},
+    {t:'一颗锈点的两周时间线',k:'时间线 锈点 对照 18/0',u:'/#timeline'},
+    {t:'西餐叉子暂停信号',k:'礼仪 暂停 信号',u:'/#faq'},
+    {t:'海鲜叉两齿短柄取蚝用法',k:'海鲜叉 两齿 蚝',u:'/#updates'}
+  ];
+  function render(q){
+    q=q.trim();
+    if(!q){results.innerHTML='<p style="color:var(--ink-3)">输入关键词查找站内条目。</p>';return;}
+    var hits=data.filter(function(d){return d.t.indexOf(q)>-1||d.k.indexOf(q)>-1});
+    if(!hits.length){
+      results.innerHTML='<p class="none">没有找到「'+q.replace(/[<>&]/g,'')+'」相关条目，换个词试试，例如「齿距」「颈厚」「18/0」。</p>';
+      return;
+    }
+    results.innerHTML='<ul>'+hits.map(function(d){
+      return '<li><a href="'+d.u+'">'+d.t+'</a></li>';
+    }).join('')+'</ul>';
+  }
+  function openSearch(){
+    panel.classList.add('open');
+    render('');
+    setTimeout(function(){input.focus()},30);
+  }
+  function closeSearch(){panel.classList.remove('open');}
+  document.getElementById('searchOpen').addEventListener('click',openSearch);
+  document.getElementById('searchClose').addEventListener('click',closeSearch);
+  panel.addEventListener('click',function(e){ if(e.target===panel) closeSearch(); });
+  input.addEventListener('input',function(){render(input.value)});
+  input.addEventListener('keydown',function(e){
+    if(e.key==='Enter'){
+      var first=results.querySelector('a');
+      if(first){window.location.hash=first.getAttribute('href').replace('/',''); closeSearch();}
+    }
+    if(e.key==='Escape') closeSearch();
+  });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeSearch(); });
+
+  // 搜索面板打开时锁滚动
+  var obs=new MutationObserver(function(){
+    document.body.style.overflow=panel.classList.contains('open')?'hidden':'';
+  });
+  obs.observe(panel,{attributes:true,attributeFilter:['class']});
+
+  // 投票点击交互（示例）
+  var pollRows=document.querySelectorAll('#pollBox .poll-row');
+  pollRows.forEach(function(row){
+    row.style.cursor='pointer';
+    row.addEventListener('click',function(){
+      row.style.background='var(--gold-soft)';
+      row.setAttribute('title','已记录你的选择（示例）');
+    });
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"情深叉喔",
+  "inLanguage":"zh-CN",
+  "description":"围绕叉子器物与用餐礼仪的内容站点，记录齿距、材质与日常使用的实测经验。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"主餐叉齿距多少毫米适合吃意面？","acceptedAnswer":{"@type":"Answer","text":"齿距 6—7 毫米是实测里最稳的区间。齿距过窄会插深、翻面时面条成团；过宽则抬叉即滑。"}},
+    {"@type":"Question","name":"18/10 和 18/0 不锈钢叉，日常用哪个更合适？","acceptedAnswer":{"@type":"Answer","text":"18/10 含镍更高，耐蚀与光泽更好。18/0 价位低、磁性强，洗后擦干能显著减少锈点。"}},
+    {"@type":"Question","name":"叉子放洗碗机后出现锈点，是材质差吗？","acceptedAnswer":{"@type":"Answer","text":"先看使用环节。盐分残留、篮底积水、与铁质锅具同洗都可能引发锈点，可用同批叉分两组对照两周。"}},
+    {"@type":"Question","name":"西餐里叉子暂放和用完的信号怎么区分？","acceptedAnswer":{"@type":"Answer","text":"英式写法是叉齿朝下、叉背朝上表示暂停；美式写法是叉齿朝上、与刀成八字。场合里跟着同桌主人一致更稳妥。"}},
+    {"@type":"Question","name":"儿童训练叉选圆头还是钝角？","acceptedAnswer":{"@type":"Answer","text":"圆头适合 2—3 岁初学阶段，更安全但刺取失败率高；钝角四齿适合 4 岁以上，家长仍需看护。"}},
+    {"@type":"Question","name":"锻造叉一定比冲压叉耐用吗？","acceptedAnswer":{"@type":"Answer","text":"不一定。颈厚才是抗弯关键，实测中有一把冲压叉颈厚 3.0 毫米，表现接近锻造款。"}}
+  ]
+}
+</script>
+</body>
+                                  </html>
