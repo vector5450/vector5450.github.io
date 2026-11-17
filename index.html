@@ -1,0 +1,1157 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>鸠摩智性吧-角色辨析与讨论指南</title>
+<meta name="description" content="鸠摩智性吧聚焦鸠摩智这一金庸人物的性格动机、武功来历与网络讨论。梳理火焰刀与小无相功的版本差异、角色争议说法、入门阅读顺序与常见疑问，帮你看清人物逻辑。">
+<meta name="keywords" content="鸠摩智性吧">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232a2e39'/%3E%3Cpath d='M8 23V9h4l4 7 4-7h4v14h-4v-7l-4 7-4-7v7z' fill='%23e6b34a'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1d2129;
+  --ink-2:#3d4553;
+  --muted:#6b7280;
+  --line:#e3e6ea;
+  --paper:#f6f4ef;
+  --card:#ffffff;
+  --brand:#8c2f1e;
+  --brand-soft:#f4e6df;
+  --gold:#b8862b;
+  --gold-soft:#f7efd8;
+  --teal:#2f6b63;
+  --shadow:0 1px 2px rgba(24,28,35,.06),0 8px 24px -12px rgba(24,28,35,.18);
+  --r:12px;
+  --r-sm:8px;
+  --gap:20px;
+  --maxw:1180px;
+  --font:"Songti SC","Noto Serif SC","Source Han Serif SC",Georgia,"Microsoft YaHei",serif;
+  --font-ui:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  --anchor:132px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--font-ui);
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.78;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+h1,h2,h3{font-family:var(--font);line-height:1.35;margin:0;letter-spacing:.01em}
+h2{font-size:1.5rem}
+h3{font-size:1.12rem}
+p{margin:0 0 .9em}
+section{scroll-margin-top:var(--anchor)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* 吸顶公告条 + 页头 */
+.sticky-top{position:sticky;top:0;z-index:50}
+.notice{
+  background:#241f1c;color:#f0e6d8;font-size:.84rem;
+  display:flex;gap:14px;align-items:center;justify-content:center;
+  padding:8px 16px;flex-wrap:wrap;letter-spacing:.02em;
+}
+.notice b{color:var(--gold);font-weight:600}
+.notice .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);display:inline-block;margin-right:8px;vertical-align:2px}
+.notice a{color:#f0e6d8;text-decoration:underline;text-underline-offset:3px}
+.header{
+  background:rgba(255,255,255,.94);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 1px 0 rgba(0,0,0,.02);
+}
+.header-inner{
+  max-width:var(--maxw);margin:0 auto;padding:12px 20px;
+  display:flex;align-items:center;gap:18px;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.brand:hover{text-decoration:none}
+.brand svg{width:38px;height:38px;flex:none}
+.brand-name{font-family:var(--font);font-size:1.16rem;font-weight:700;letter-spacing:.04em}
+.brand-sub{display:block;font-family:var(--font-ui);font-size:.66rem;color:var(--muted);letter-spacing:.18em;font-weight:400}
+.nav{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.nav a{
+  color:var(--ink-2);font-size:.9rem;padding:6px 10px;border-radius:var(--r-sm);
+  transition:background .15s,color .15s;
+}
+.nav a:hover{background:var(--brand-soft);color:var(--brand);text-decoration:none}
+.nav a.active{background:var(--brand-soft);color:var(--brand);font-weight:600}
+.menu-btn{
+  display:none;margin-left:auto;background:#fff;border:1px solid var(--line);
+  padding:8px 12px;border-radius:var(--r-sm);font-size:.9rem;cursor:pointer;color:var(--ink);
+}
+.search-wrap{position:relative;flex:none}
+.search-wrap input{
+  font-family:var(--font-ui);font-size:.86rem;padding:8px 10px;width:180px;
+  border:1px solid var(--line);border-radius:var(--r-sm);background:#fbfaf7;color:var(--ink);
+}
+.search-wrap input:focus{background:#fff;border-color:var(--gold)}
+.search-msg{
+  position:absolute;top:calc(100% + 6px);right:0;width:260px;background:#fff;
+  border:1px solid var(--line);border-radius:var(--r-sm);box-shadow:var(--shadow);
+  font-size:.82rem;padding:10px 12px;color:var(--muted);display:none;z-index:60;line-height:1.5;
+}
+.search-msg.show{display:block}
+
+/* 首屏 */
+.hero{
+  max-width:var(--maxw);margin:0 auto;padding:44px 20px 20px;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:38px;align-items:center;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:.78rem;letter-spacing:.16em;
+  color:var(--brand);background:var(--brand-soft);padding:5px 12px;border-radius:999px;
+  font-weight:600;margin-bottom:18px;
+}
+.hero h1{
+  font-size:clamp(2rem,4.4vw,3.1rem);font-weight:700;letter-spacing:.03em;margin-bottom:16px;
+}
+.hero h1 em{font-style:normal;color:var(--brand)}
+.hero-lead{font-family:var(--font);font-size:1.06rem;color:var(--ink-2);max-width:34em;margin-bottom:22px;line-height:1.85}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.btn{
+  display:inline-block;padding:11px 22px;border-radius:999px;font-size:.94rem;font-weight:600;
+  transition:transform .15s,box-shadow .15s,background .15s;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 6px 16px -8px rgba(140,47,30,.7)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink);background:#fff}
+.btn-ghost:hover{border-color:var(--brand);color:var(--brand)}
+.hero-stats{display:flex;gap:28px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:18px}
+.hero-stats div{font-size:.8rem;color:var(--muted)}
+.hero-stats strong{display:block;font-family:var(--font);font-size:1.5rem;color:var(--ink);font-weight:700;letter-spacing:.02em}
+
+.hero-art{position:relative;aspect-ratio:1/1;max-width:420px;justify-self:center}
+.hero-art svg{width:100%;height:100%}
+
+/* 主内容容器 */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:10px 20px 40px}
+.grid-2{display:grid;grid-template-columns:1fr 320px;gap:36px;align-items:start}
+.main-col{min-width:0}
+.side-col{min-width:0;display:flex;flex-direction:column;gap:20px;position:sticky;top:var(--anchor)}
+
+.block{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  padding:26px 26px 22px;margin-bottom:22px;box-shadow:var(--shadow);
+}
+.block-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.block-head h2{display:flex;align-items:center;gap:10px}
+.block-head h2::before{content:"";width:4px;height:20px;background:var(--brand);border-radius:2px;display:inline-block}
+.more-link{font-size:.84rem;color:var(--muted);white-space:nowrap}
+.more-link:hover{color:var(--brand)}
+.sec-sub{font-size:.84rem;color:var(--muted);margin:-8px 0 18px}
+
+/* 概览：标签索引 + 文字 */
+.overview-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:22px}
+.overview-text p{font-size:.95rem;color:var(--ink-2)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.tags li a{
+  display:inline-block;font-size:.82rem;padding:5px 12px;border-radius:999px;
+  background:#f2f1ec;color:var(--ink-2);border:1px solid transparent;transition:.15s;
+}
+.tags li a:hover{background:var(--gold-soft);color:#7a5a12;border-color:#e4d2a4;text-decoration:none}
+
+/* 精选卡片网格 */
+.card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.card{
+  border:1px solid var(--line);border-radius:var(--r-sm);background:#fff;overflow:hidden;
+  display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card img{aspect-ratio:16/9;width:100%;object-fit:cover}
+.card-body{padding:14px 16px 16px}
+.card-kicker{font-size:.72rem;letter-spacing:.12em;color:var(--gold);font-weight:600;margin-bottom:6px;display:block}
+.card h3{font-size:1rem;margin-bottom:6px}
+.card p{font-size:.85rem;color:var(--muted);margin:0;line-height:1.65}
+.card-wide{grid-column:1/-1;flex-direction:row}
+.card-wide img{width:42%;aspect-ratio:auto;min-height:170px}
+.card-wide .card-body{display:flex;flex-direction:column;justify-content:center}
+
+/* 最新更新：时间线列表 */
+.updates{list-style:none;margin:0;padding:0;border-left:2px solid var(--line);margin-left:6px}
+.updates li{position:relative;padding:0 0 20px 22px}
+.updates li:last-child{padding-bottom:0}
+.updates li::before{
+  content:"";position:absolute;left:-7px;top:7px;width:10px;height:10px;border-radius:50%;
+  background:#fff;border:2px solid var(--gold);
+}
+.up-date{font-size:.76rem;color:var(--brand);font-weight:600;letter-spacing:.05em}
+.up-title{font-size:.95rem;font-weight:600;margin:2px 0 3px;display:block;color:var(--ink)}
+.up-desc{font-size:.85rem;color:var(--muted);margin:0}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.cat-item{
+  border:1px solid var(--line);border-radius:var(--r-sm);padding:14px 15px;background:#fbfaf7;
+  transition:.15s;display:block;
+}
+.cat-item:hover{border-color:var(--gold);background:#fff;text-decoration:none;transform:translateY(-2px)}
+.cat-item strong{display:block;font-size:.94rem;color:var(--ink);margin-bottom:2px}
+.cat-item span{font-size:.78rem;color:var(--muted)}
+
+/* 深度解析 */
+.deep{border-top:3px solid var(--brand)}
+.deep h2{font-size:1.7rem}
+.deep-body{max-width:44em}
+.deep-body h3{margin:26px 0 10px;padding-left:12px;border-left:3px solid var(--gold)}
+.deep-body h3:first-of-type{margin-top:6px}
+.deep-body p{font-size:.97rem;color:var(--ink-2)}
+.quote-card{
+  margin:20px 0;padding:18px 22px;background:var(--gold-soft);border-radius:var(--r-sm);
+  font-family:var(--font);font-size:1.02rem;color:#5a4413;border-left:4px solid var(--gold);
+}
+.quote-card cite{display:block;font-family:var(--font-ui);font-size:.78rem;color:#8a7231;font-style:normal;margin-top:8px}
+.check-list{list-style:none;margin:14px 0;padding:0;counter-reset:c}
+.check-list li{
+  counter-increment:c;position:relative;padding:10px 14px 10px 44px;font-size:.9rem;
+  background:#faf9f6;border:1px solid var(--line);border-radius:var(--r-sm);margin-bottom:8px;
+  color:var(--ink-2);
+}
+.check-list li::before{
+  content:counter(c);position:absolute;left:12px;top:10px;width:22px;height:22px;border-radius:50%;
+  background:var(--teal);color:#fff;font-size:.76rem;display:grid;place-items:center;font-weight:700;
+}
+.compare{width:100%;border-collapse:collapse;margin:14px 0;font-size:.87rem}
+.compare th,.compare td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+.compare th{background:#f2f1ec;font-weight:600;font-size:.82rem;color:var(--ink-2)}
+.compare td:first-child{font-weight:600;color:var(--ink);white-space:nowrap}
+
+/* 体验指南步骤 */
+.steps{counter-reset:s;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.steps li{
+  counter-increment:s;position:relative;padding:16px 16px 16px 52px;border:1px solid var(--line);
+  border-radius:var(--r-sm);background:#fbfaf7;font-size:.88rem;color:var(--ink-2);
+}
+.steps li::before{
+  content:counter(s,decimal-leading-zero);position:absolute;left:14px;top:14px;
+  font-family:var(--font);font-size:1.1rem;font-weight:700;color:var(--gold);
+}
+.steps li strong{display:block;color:var(--ink);font-size:.93rem;margin-bottom:2px}
+
+/* FAQ */
+.faq details{border-bottom:1px solid var(--line);padding:4px 0}
+.faq details:last-of-type{border-bottom:0}
+.faq summary{
+  cursor:pointer;font-weight:600;font-size:.95rem;padding:12px 30px 12px 4px;position:relative;
+  list-style:none;color:var(--ink);transition:color .15s;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);
+  font-size:1.2rem;color:var(--gold);transition:transform .2s;
+}
+.faq details[open] summary::after{content:"−"}
+.faq summary:hover{color:var(--brand)}
+.faq .ans{font-size:.9rem;color:var(--ink-2);padding:0 4px 14px;max-width:42em}
+
+/* 用户评论 */
+.comments{display:grid;gap:12px}
+.comment{
+  display:grid;grid-template-columns:40px 1fr;gap:12px;padding:14px 16px;background:#fbfaf7;
+  border:1px solid var(--line);border-radius:var(--r-sm);
+}
+.avatar{
+  width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:#fff;
+  font-family:var(--font);font-weight:700;font-size:.95rem;
+}
+.comment .who{font-size:.8rem;color:var(--muted);margin-bottom:3px}
+.comment .who b{color:var(--ink);font-weight:600;font-size:.86rem}
+.comment p{font-size:.88rem;color:var(--ink-2);margin:0;line-height:1.7}
+
+/* 相关资讯列表 */
+.news{list-style:none;margin:0;padding:0}
+.news li{padding:12px 0;border-bottom:1px dashed var(--line);display:flex;gap:14px;align-items:flex-start}
+.news li:last-child{border-bottom:0}
+.news time{font-size:.76rem;color:var(--brand);white-space:nowrap;font-variant-numeric:tabular-nums;padding-top:3px;min-width:48px}
+.news .n-body{min-width:0}
+.news .n-title{font-size:.93rem;font-weight:600;color:var(--ink);display:block;margin-bottom:2px}
+.news .n-sum{font-size:.82rem;color:var(--muted);margin:0}
+
+/* 相关推荐标签 */
+.rec-tags{display:flex;flex-wrap:wrap;gap:9px}
+.rec-tags a{
+  font-size:.84rem;padding:7px 14px;border-radius:var(--r-sm);border:1px solid var(--line);
+  background:#fff;color:var(--ink-2);transition:.15s;
+}
+.rec-tags a:hover{border-color:var(--brand);color:var(--brand);background:var(--brand-soft);text-decoration:none}
+
+/* 榜单 */
+.rank{list-style:none;margin:0;padding:0;counter-reset:r}
+.rank li{
+  counter-increment:r;display:grid;grid-template-columns:32px 1fr auto;gap:12px;align-items:center;
+  padding:11px 0;border-bottom:1px solid var(--line);font-size:.9rem;
+}
+.rank li:last-child{border-bottom:0}
+.rank li::before{
+  content:counter(r);font-family:var(--font);font-weight:700;font-size:1rem;
+  color:var(--muted);width:26px;height:26px;display:grid;place-items:center;border-radius:50%;background:#f2f1ec;
+}
+.rank li:nth-child(1)::before,.rank li:nth-child(2)::before,.rank li:nth-child(3)::before{background:var(--gold);color:#fff}
+.rank .r-title{font-weight:600;color:var(--ink)}
+.rank .r-note{font-size:.78rem;color:var(--muted);display:block}
+.rank .r-count{font-size:.78rem;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+
+/* 侧栏 */
+.side-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  padding:20px;box-shadow:var(--shadow);
+}
+.side-card h2,.side-card h3{font-size:1rem;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.side-nav{list-style:none;margin:0;padding:0;font-size:.88rem}
+.side-nav li a{
+  display:block;padding:7px 12px;color:var(--ink-2);border-radius:var(--r-sm);border-left:2px solid transparent;
+  transition:.15s;
+}
+.side-nav li a:hover{background:#f6f4ef;color:var(--brand);text-decoration:none}
+.side-nav li a.active{background:var(--brand-soft);color:var(--brand);border-left-color:var(--brand);font-weight:600}
+.side-note{font-size:.8rem;color:var(--muted);line-height:1.7;margin:0}
+.side-list{list-style:none;margin:0;padding:0;font-size:.87rem}
+.side-list li{padding:9px 0;border-bottom:1px dashed var(--line);display:flex;gap:8px;align-items:baseline}
+.side-list li:last-child{border-bottom:0}
+.side-list .s-tag{font-size:.7rem;background:var(--gold-soft);color:#7a5a12;padding:1px 7px;border-radius:4px;flex:none}
+.side-list a{color:var(--ink-2);line-height:1.6}
+.side-list a:hover{color:var(--brand)}
+.score-box{display:flex;gap:16px;align-items:center}
+.score-num{font-family:var(--font);font-size:2.3rem;font-weight:700;color:var(--brand);line-height:1}
+.score-bar{flex:1;height:8px;background:#f2f1ec;border-radius:99px;overflow:hidden}
+.score-bar span{display:block;height:100%;width:78%;background:linear-gradient(90deg,var(--gold),var(--brand));border-radius:99px}
+.score-meta{font-size:.78rem;color:var(--muted);margin-top:6px}
+
+/* 页尾 */
+.footer{
+  background:#241f1c;color:#cfc6ba;margin-top:20px;padding:44px 20px 26px;font-size:.88rem;
+}
+.footer-inner{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+.footer .fbrand{display:flex;align-items:center;gap:10px;margin-bottom:12px;color:#f0e6d8}
+.footer .fbrand svg{width:34px;height:34px}
+.footer .fbrand span{font-family:var(--font);font-size:1.1rem;font-weight:700;letter-spacing:.04em}
+.footer p{color:#a89e92;line-height:1.75;margin:0 0 8px;font-size:.83rem}
+.footer h3{font-family:var(--font-ui);font-size:.84rem;color:#f0e6d8;letter-spacing:.1em;margin-bottom:12px;font-weight:600}
+.footer ul{list-style:none;margin:0;padding:0;font-size:.83rem}
+.footer li{margin-bottom:7px}
+.footer a{color:#b8ad9f}
+.footer a:hover{color:var(--gold);text-decoration:none}
+.footer-bottom{
+  max-width:var(--maxw);margin:28px auto 0;padding-top:18px;border-top:1px solid #3a332d;
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.78rem;color:#8a8076;
+}
+.disclaimer{font-size:.76rem;color:#8a8076;background:#2d2723;border-radius:var(--r-sm);padding:10px 14px;margin-top:16px;line-height:1.7}
+
+/* 回到顶部 */
+.to-top{
+  position:fixed;right:20px;bottom:24px;width:44px;height:44px;border-radius:50%;
+  background:var(--brand);color:#fff;border:0;font-size:1.1rem;cursor:pointer;display:none;
+  place-items:center;box-shadow:0 8px 20px -8px rgba(140,47,30,.8);z-index:80;
+  transition:transform .15s,opacity .2s;
+}
+.to-top.show{display:grid}
+.to-top:hover{transform:translateY(-3px)}
+.to-top:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+/* 平板 */
+@media (max-width:960px){
+  .hero{grid-template-columns:1fr;gap:26px;padding-top:32px}
+  .hero-art{max-width:340px;order:-1}
+  .grid-2{grid-template-columns:1fr;gap:22px}
+  .side-col{position:static;display:grid;grid-template-columns:repeat(2,1fr)}
+  .overview-grid{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr 1fr}
+  .nav{display:none}
+  .nav.open{display:flex;width:100%;margin-left:0;order:5;padding-top:6px;border-top:1px solid var(--line);margin-top:6px}
+  .menu-btn{display:block}
+  .search-wrap{order:4}
+  .search-wrap input{width:100%}
+  .header-inner{position:relative}
+}
+/* 手机 */
+@media (max-width:620px){
+  :root{--anchor:150px;--gap:14px}
+  body{font-size:15px}
+  .header-inner{padding:10px 14px;gap:10px}
+  .wrap{padding:6px 14px 30px}
+  .hero{padding:24px 14px 12px}
+  .hero-stats{gap:20px}
+  .block{padding:20px 16px 18px}
+  .card-grid{grid-template-columns:1fr}
+  .card-wide{flex-direction:column}
+  .card-wide img{width:100%;aspect-ratio:16/9;min-height:0}
+  .cat-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr}
+  .side-col{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr;gap:22px}
+  .notice{font-size:.76rem;padding:7px 12px;gap:8px}
+  .search-msg{width:calc(100vw - 40px);max-width:300px}
+  .rank li{grid-template-columns:28px 1fr;gap:8px}
+  .rank .r-count{display:none}
+  .to-top{right:14px;bottom:16px;width:40px;height:40px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+  .card:hover,.btn:hover,.cat-item:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-top">
+  <div class="notice" role="note">
+    <span><span class="dot"></span><b>鸠摩智性吧</b> 公告：11 月 6 日更新「小无相功与火焰刀版本对照」</span>
+    <span>本周新增角色动机长帖 14 篇 · 待核对说法 3 条</span>
+  </div>
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="/#top" aria-label="鸠摩智性吧首页">
+        <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <rect width="40" height="40" rx="9" fill="#2a2e39"/>
+          <path d="M11 29V11h5l4 9 4-9h5v18h-5v-9l-4 9-4-9v9z" fill="#e6b34a"/>
+          <circle cx="32" cy="8" r="3" fill="#8c2f1e"/>
+        </svg>
+        <span>
+          <span class="brand-name">鸠摩智性吧</span>
+          <span class="brand-sub">角色 · 动机 · 版本</span>
+        </span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">导航菜单</button>
+      <nav class="nav" id="mainNav" aria-label="主题导航">
+        <a href="/#overview">人物概览</a>
+        <a href="/#picks">精选推荐</a>
+        <a href="/#updates">最新更新</a>
+        <a href="/#categories">分类入口</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见疑问</a>
+      </nav>
+
+      <div class="search-wrap">
+        <label class="sr-only" for="siteSearch">站内查找条目</label>
+        <input id="siteSearch" type="search" placeholder="查条目：火焰刀 / 小无相功" autocomplete="off">
+        <div class="search-msg" id="searchMsg" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div>
+      <span class="eyebrow">金庸人物 · 逐条拆解</span>
+      <h1 id="hero-title">鸠摩智性吧</h1>
+      <p class="hero-lead">
+        把吐蕃国师鸠摩智拆成可讨论的几层：火焰刀的实战距离、小无相功的来历与破法、天龙寺与少林两场战例的胜负条件，以及“武痴”与“高僧”两种身份在原文中如何互相拉扯。条目按三联版与新修版分开写，说法有出处的才放进判断区。
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#deep">读深度解析</a>
+        <a class="btn btn-ghost" href="/#categories">按分类找条目</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>9</strong>个讨论频道</div>
+        <div><strong>46</strong>条人物条目</div>
+        <div><strong>11-06</strong>最近一次规则核对</div>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 400 400" role="img" aria-label="火焰刀与经卷的抽象构图">
+        <defs>
+          <radialGradient id="glow" cx="50%" cy="45%" r="55%">
+            <stop offset="0%" stop-color="#f7efd8"/>
+            <stop offset="100%" stop-color="#f6f4ef"/>
+          </radialGradient>
+          <linearGradient id="flame" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0%" stop-color="#8c2f1e"/>
+            <stop offset="55%" stop-color="#c9632a"/>
+            <stop offset="100%" stop-color="#e6b34a"/>
+          </linearGradient>
+        </defs>
+        <circle cx="200" cy="195" r="160" fill="url(#glow)"/>
+        <circle cx="200" cy="195" r="160" fill="none" stroke="#e3e6ea"/>
+        <circle cx="200" cy="195" r="118" fill="none" stroke="#d9c79a" stroke-dasharray="3 7"/>
+        <!-- 经卷 -->
+        <g transform="translate(140 150)">
+          <rect x="0" y="0" width="120" height="86" rx="5" fill="#fff" stroke="#d9d3c4"/>
+          <line x1="14" y1="24" x2="106" y2="24" stroke="#e3e6ea" stroke-width="3"/>
+          <line x1="14" y1="40" x2="96" y2="40" stroke="#ece8df" stroke-width="3"/>
+          <line x1="14" y1="56" x2="104" y2="56" stroke="#ece8df" stroke-width="3"/>
+          <line x1="14" y1="72" x2="72" y2="72" stroke="#ece8df" stroke-width="3"/>
+        </g>
+        <!-- 火焰刀 -->
+        <path d="M255 300 C 226 256, 240 208, 300 172 C 268 218, 280 246, 306 262 C 288 268, 272 288, 268 306 Z" fill="url(#flame)" opacity=".92"/>
+        <path d="M262 296 C 246 262, 256 226, 292 198" fill="none" stroke="#fff5e0" stroke-width="2" opacity=".8"/>
+        <!-- 念珠 -->
+        <g stroke="#b8862b" fill="#f7efd8" stroke-width="2">
+          <circle cx="118" cy="130" r="7"/>
+          <circle cx="98" cy="146" r="7"/>
+          <circle cx="86" cy="168" r="7"/>
+          <circle cx="84" cy="192" r="7"/>
+        </g>
+        <circle cx="318" cy="120" r="4" fill="#8c2f1e"/>
+        <circle cx="92" cy="240" r="3" fill="#b8862b"/>
+      </svg>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="grid-2">
+
+      <!-- 主列 -->
+      <div class="main-col">
+
+        <!-- 领域概览 -->
+        <section class="block" id="overview" aria-labelledby="overview-h">
+          <div class="block-head">
+            <h2 id="overview-h">人物概览与条目范围</h2>
+            <a class="more-link" href="/#categories">按频道浏览 →</a>
+          </div>
+          <div class="overview-grid">
+            <div class="overview-text">
+              <p>
+                鸠摩智在《天龙八部》里出场于大理天龙寺夺《六脉神剑经》一段，身份是吐蕃大雪山大轮寺僧人、国师。他和普通反派不同的地方在于，目的不是摄政也不是复仇，而是收集天下武学抄本。这条动机线支撑了后来闯少林、上姑苏、被段誉吸走内力的全部行为。
+              </p>
+              <p>
+                讨论时最容易混的两件事：一是火焰刀属于内功外放还是掌法，二是小无相功究竟是逍遥派传承还是他从慕容博处听来。三联版与新修版在后者上给了不同交代，条目里分别标注页码与回目，避免把两个版本的情节缝在一起讲。
+              </p>
+              <p>
+                条目按“战例、功法、身份、版本、争议”五类拆分，约 46 条，每条注明出处回目。评论与推测单列，不与原文事实混排。
+              </p>
+            </div>
+            <div>
+              <h3 style="font-size:.9rem;margin-bottom:10px;color:var(--muted);font-weight:600;letter-spacing:.08em">高频检索词</h3>
+              <ul class="tags">
+                <li><a href="/#picks">火焰刀实战距离</a></li>
+                <li><a href="/#deep">小无相功来历</a></li>
+                <li><a href="/#picks">天龙寺六脉神剑之战</a></li>
+                <li><a href="/#guide">鸠摩智武功排名</a></li>
+                <li><a href="/#faq">鸠摩智为什么走火入魔</a></li>
+                <li><a href="/#deep">少林七十二绝技伪造说</a></li>
+                <li><a href="/#updates">新修版鸠摩智结局</a></li>
+                <li><a href="/#picks">吐蕃国师身份考</a></li>
+                <li><a href="/#deep">易筋经与段誉北冥神功</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 精选内容推荐 -->
+        <section class="block" id="picks" aria-labelledby="picks-h">
+          <div class="block-head">
+            <h2 id="picks-h">精选内容推荐</h2>
+            <a class="more-link" href="/#updates">全部条目 →</a>
+          </div>
+          <p class="sec-sub">按战例、功法、身份三条线各取两篇，均带原文回目。</p>
+          <div class="card-grid">
+            <article class="card card-wide">
+              <img src="https://picsum.photos/seed/jiumozhi-temple/720/420" width="720" height="420" loading="lazy" alt="天龙寺庭院中的石阶与经卷摆放场景示意">
+              <div class="card-body">
+                <span class="card-kicker">战例复盘</span>
+                <h3><a href="/#deep">天龙寺一战的胜负条件：六脉神剑为何只撑了半场</a></h3>
+                <p>枯荣大师焚经、五本各持一剑、段誉初学未成，三个变量叠在一起才让鸠摩智占先。把这场战拆成时间轴，能看到火焰刀的真正优势是距离，不是威力。</p>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://picsum.photos/seed/flame-blade/560/320" width="560" height="320" loading="lazy" alt="暗色背景下一道弧形火焰的抽象示意">
+              <div class="card-body">
+                <span class="card-kicker">功法条目</span>
+                <h3><a href="/#deep">火焰刀的内功外放属性与攻击距离</a></h3>
+                <p>原文写“掌力不及处，刀劲可至”，指向的是内劲离体。与劈空掌、参合指放在一张对照表里比较更清楚。</p>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://picsum.photos/seed/shaolin-wall/560/320" width="560" height="320" loading="lazy" alt="少林寺石阶与古墙的远景示意">
+              <div class="card-body">
+                <span class="card-kicker">身份考</span>
+                <h3><a href="/#guide">国师身份与“武痴”标签是否冲突</a></h3>
+                <p>大轮寺僧人的宗教身份、吐蕃对宋的外交位置、个人对武学的执念，三者在原著里并未被写成互相排斥。</p>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://picsum.photos/seed/xiaowuxiang/560/320" width="560" height="320" loading="lazy" alt="旧书页与手抄经文的特写示意">
+              <div class="card-body">
+                <span class="card-kicker">版本对照</span>
+                <h3><a href="/#deep">小无相功来源：三联版与新修版差在哪</a></h3>
+                <p>关键差别在“从何处学得”这一句。列出两版原文措辞，争议说法就不必再靠转述判断。</p>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://picsum.photos/seed/duanyu/560/320" width="560" height="320" loading="lazy" alt="云雾山间小径的示意画面">
+              <div class="card-body">
+                <span class="card-kicker">结局线</span>
+                <h3><a href="/#faq">内力被吸之后的转折如何收束</a></h3>
+                <p>枯井一段是角色功能反转的节点。原文对他的顿悟写得短，评论区的分歧也集中在这里。</p>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://picsum.photos/seed/tubo-envoy/560/320" width="560" height="320" loading="lazy" alt="古代驿道与行旅的示意画面">
+              <div class="card-body">
+                <span class="card-kicker">背景条目</span>
+                <h3><a href="/#deep">吐蕃国师入宋的行动半径有多大</a></h3>
+                <p>从大理到姑苏再到少林，动线跨度是角色行动力的证据，也解释了为何他能同时卷入多起事件。</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 最新更新 -->
+        <section class="block" id="updates" aria-labelledby="updates-h">
+          <div class="block-head">
+            <h2 id="updates-h">最新更新</h2>
+            <span class="more-link">近 30 天</span>
+          </div>
+          <ul class="updates">
+            <li>
+              <span class="up-date">2026-11-06</span>
+              <a class="up-title" href="/#deep">补入小无相功两版原文对照表</a>
+              <p class="up-desc">新增三联版第 39 回与新修版对应段落的逐句并置，标出“学自何处”的措辞变化。</p>
+            </li>
+            <li>
+              <span class="up-date">2026-11-03</span>
+              <a class="up-title" href="/#picks">少林寺战例条目重写时间轴</a>
+              <p class="up-desc">把虚竹出场前后拆成四段，注明每段鸠摩智的应对方式与所使功法，删去原先的笼统胜负判断。</p>
+            </li>
+            <li>
+              <span class="up-date">2026-10-29</span>
+              <a class="up-title" href="/#faq">FAQ 增加走火入魔的三条常见误解</a>
+              <p class="up-desc">区分“强行兼修”与“内力反噬”两种描述，附原文中练功顺序的线索。</p>
+            </li>
+            <li>
+              <span class="up-date">2026-10-24</span>
+              <a class="up-title" href="/#guide">体验指南补入入门阅读顺序</a>
+              <p class="up-desc">按回目给出六步读法，先看天龙寺，再看姑苏与少林，最后回到枯井收束。</p>
+            </li>
+            <li>
+              <span class="up-date">2026-10-18</span>
+              <a class="up-title" href="/#rank">武功排序榜单换用统一比较维度</a>
+              <p class="up-desc">改用攻击距离、持续力、破法难度三项打分，原先只按名气排列的条目已下架。</p>
+            </li>
+            <li>
+              <span class="up-date">2026-10-12</span>
+              <a class="up-title" href="/#comments">评论区新增“指向具体条目”标签</a>
+              <p class="up-desc">带条目编号的评论单独筛选，方便核对说法出处，未标编号的保留在综合讨论区。</p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 分类入口 -->
+        <section class="block" id="categories" aria-labelledby="cat-h">
+          <div class="block-head">
+            <h2 id="cat-h">分类入口</h2>
+            <span class="more-link">9 个频道</span>
+          </div>
+          <div class="cat-grid">
+            <a class="cat-item" href="/#picks"><strong>天龙寺夺经战</strong><span>枯荣、五本、段誉</span></a>
+            <a class="cat-item" href="/#picks"><strong>少林寺论武</strong><span>七十二绝技与虚竹</span></a>
+            <a class="cat-item" href="/#deep"><strong>火焰刀拆解</strong><span>距离、劲力、收势</span></a>
+            <a class="cat-item" href="/#deep"><strong>小无相功考据</strong><span>来源与两版差异</span></a>
+            <a class="cat-item" href="/#deep"><strong>易筋经线</strong><span>夺经动机与去向</span></a>
+            <a class="cat-item" href="/#guide"><strong>身份与外交</strong><span>国师、吐蕃、行动半径</span></a>
+            <a class="cat-item" href="/#faq"><strong>走火入魔</strong><span>练功顺序与反噬</span></a>
+            <a class="cat-item" href="/#rank"><strong>战力对照</strong><span>同书人物横向比较</span></a>
+            <a class="cat-item" href="/#comments"><strong>争议说法</strong><span>事实、回应、推测分层</span></a>
+          </div>
+        </section>
+
+        <!-- 深度解析 -->
+        <section class="block deep" id="deep" aria-labelledby="deep-h">
+          <div class="block-head">
+            <h2 id="deep-h">深度解析：鸠摩智的战力被高估了吗</h2>
+          </div>
+          <div class="deep-body">
+            <p>
+              把鸠摩智放进《天龙八部》的战力讨论里，常见两种极端：一种说他“打遍天龙无敌手”，另一种说他“全靠小无相功假装会七十二绝技”。两种说法都跳过了具体战例。逐场看，他的强度有明确边界，而且边界位置在原文里写得很清楚。
+            </p>
+
+            <h3>一、天龙寺：赢在先手，不在功力总量</h3>
+            <p>
+              三联版第 10 回，鸠摩智以火焰刀隔空点穴，制住段誉；枯荣大师随即焚毁《六脉神剑经》。这里有个容易忽略的时间差：他出刀时，五本尚未结成完整剑阵。原文写“六脉神剑，有质无形”，说明剑气的成形需要配合，而配合需要时间。鸠摩智选在段誉被擒、五本分心的一瞬发力，是战术选择，不是硬碰硬压制。
+            </p>
+            <p>
+              对战果的判断可以拆成三项核对：
+            </p>
+            <ol class="check-list">
+              <li>他是否拿到经书——没有，枯荣焚经，目标落空。</li>
+              <li>他是否全身而退——是，但带走段誉作为筹码。</li>
+              <li>他是否在正面交手中压过五本——原文未写正面对轰的胜负，写的是“各以指力遥击”。</li>
+            </ol>
+            <p>
+              三项一看，这场更像一次成功的突袭加一次失败的目标，不能直接换算成“功力高于五本之和”。
+            </p>
+
+            <h3>二、少林寺：小无相功的作用被说反了</h3>
+            <p>
+              第 40 回前后，鸠摩智在少林以“少林七十二绝技”演武，被虚竹点破所用内功来路。常见转述是“他用小无相功驱动绝技，所以是假的”。这个说法漏掉了原文的一层：小无相功能模拟各家内功的路数，但招式本身仍是他实打实练过的。问题不在招式假，而在内功根基与少林体系不匹配，长期并练会伤及自身。
+            </p>
+            <table class="compare">
+              <thead>
+                <tr><th>维度</th><th>共同说法</th><th>原文可核对的部分</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>绝技真假</td><td>全是假的</td><td>招式可演，内劲路数不同，虚竹听出“不是少林内功”</td></tr>
+                <tr><td>胜负原因</td><td>被虚竹打败</td><td>虚竹以逍遥派内功破其运劲，鸠摩智随后身有隐患暴露</td></tr>
+                <tr><td>身体代价</td><td>临场失手</td><td>多功并修的隐患在更早已有铺垫，非一时失误</td></tr>
+              </tbody>
+            </table>
+            <p>
+              小无相功在这里的功能是“伪装”，不是“加成”。把它当成战力增幅，会把后面的身体崩盘解释成意外，因果就断了。
+            </p>
+
+            <h3>三、两版差异：小无相功的来源写法变了</h3>
+            <p>
+              三联版里，鸠摩智获取小无相功的途径交代较含混，读者多据前后文推测与逍遥派有关。新修版补入了更明确的来源指向，并调整了部分回目的叙述顺序。差异带来的后果不是情节大改，而是角色动机的解释重心移动：从“偶然得功”转向“主动搜求”。这一点直接影响怎么评价他的武学态度。
+            </p>
+            <div class="quote-card">
+              判断句：鸠摩智的强，来自搜集与转用的广度，不来自某一门功法的绝对高度。
+              <cite>依据：三次主要战例均以目标达成或未达成为评价轴，未见以功力总量定胜负的正面描写。</cite>
+            </div>
+
+            <h3>四、可被反驳的地方</h3>
+            <p>
+              上述判断有一个薄弱点：原文对火焰刀的威力上限描述并不统一。天龙寺一段强调远程点穴的精准，少林一段强调多功并修的隐患，两处描写的侧重不同。若以少林一段为准，可以说他的持续作战能力受限；若以天龙寺为准，又会得出控场能力极强的印象。两种读法都能找到文本支撑，分歧因此长期存在。
+            </p>
+            <p>
+              可核对的事实是：他在第 10 回成功制住段誉，在第 40 回前后被虚竹点破内功来路，在枯井一段被段誉吸走内力。三次事件的时间间隔、地点、对手都不同，直接横向比较需要先统一比较维度。
+            </p>
+          </div>
+        </section>
+
+        <!-- 体验指南 -->
+        <section class="block" id="guide" aria-labelledby="guide-h">
+          <div class="block-head">
+            <h2 id="guide-h">体验指南：六步读法</h2>
+            <span class="more-link">约 2 小时</span>
+          </div>
+          <p class="sec-sub">按回目顺序读，避免把前后期的功法表现混在一起谈。</p>
+          <ol class="steps">
+            <li><strong>先读天龙寺段（第 10 回）</strong>看火焰刀的首次实战，记下点穴位置与距离。</li>
+            <li><strong>再读姑苏段</strong>注意他与慕容博之间的信息交换，小无相功的线索从这里开始变得可追。</li>
+            <li><strong>读少林段（第 40 回前后）</strong>重点看虚竹如何听出内功路数，而非看谁打得更响。</li>
+            <li><strong>补读易筋经相关段落</strong>确认他搜求武学的目标清单里到底有什么。</li>
+            <li><strong>回到枯井收束</strong>内力被吸走是功能反转，不是单纯的失败描写。</li>
+            <li><strong>最后对照两版原文</strong>把来源写法的差异标出来，再看评论区里哪些说法其实来自转述。</li>
+          </ol>
+        </section>
+
+        <!-- FAQ -->
+        <section class="block faq" id="faq" aria-labelledby="faq-h">
+          <div class="block-head">
+            <h2 id="faq-h">常见疑问</h2>
+            <span class="more-link">按条目编号核对</span>
+          </div>
+          <details>
+            <summary>火焰刀和六脉神剑哪一边优势更大？</summary>
+            <div class="ans">火焰刀的优势在距离与点穴精度，六脉神剑的优势在剑气成形的密度。天龙寺一战里，鸠摩智选在五本未结阵时出手，说明正面相持并非他的首选。原文没有给出双方全力对轰的结果，比较时只能分项看：远程控场偏火焰刀，近身连续输出偏六脉。</div>
+          </details>
+          <details>
+            <summary>为什么说鸠摩智的七十二绝技不完全是假的？</summary>
+            <div class="ans">招式部分是他实际练过的，被指出问题的是内功根基。虚竹听出他运劲路数不是少林一路，这与“招式造假”是两回事。把两者混为一谈，会误读他在少林演武时为何仍能从容拆招。</div>
+          </details>
+          <details>
+            <summary>小无相功能不能算作战力加成？</summary>
+            <div class="ans">原文里它的主要作用是模拟与伪装，让不同路数的内功看起来像同一体系。加成一说缺乏文本支撑，反而会解释不了后面身体出现的隐患。</div>
+          </details>
+          <details>
+            <summary>走火入魔是突然发生的吗？</summary>
+            <div class="ans">不是。多功并修的隐患在少林段之前已有铺垫，少林演武是暴露点，不是起点。练功顺序与内功根基不匹配，是更前的原因。</div>
+          </details>
+          <details>
+            <summary>三联版和新修版该以哪版为准？</summary>
+            <div class="ans">讨论具体情节时以所引版本为准，并在条目里注明回目。两版在小无相功来源上的交代不同，混用会得出互相矛盾的动机解释。</div>
+          </details>
+          <details>
+            <summary>枯井之后他的转变怎么理解？</summary>
+            <div class="ans">内力尽失之后，角色从主动搜求转为被动收束，原文写得短，留白多。评论区的分歧集中在这是顿悟还是无奈，两种读法都有支持者。</div>
+          </details>
+        </section>
+
+        <!-- 用户评论 -->
+        <section class="block" id="comments" aria-labelledby="com-h">
+          <div class="block-head">
+            <h2 id="com-h">用户评论</h2>
+            <span class="more-link">含条目编号的优先展示</span>
+          </div>
+          <div class="comments">
+            <article class="comment">
+              <div class="avatar" style="background:#8c2f1e" aria-hidden="true">刀</div>
+              <div>
+                <div class="who"><b>火焰刀练习生</b> · 11-05 21:40 · 指向条目 #012</div>
+                <p>天龙寺那段我重读了三遍，鸠摩智确实挑在五本没结阵的时候动手。说他能一打五的，麻烦把“各以指力遥击”那句解释一下。</p>
+              </div>
+            </article>
+            <article class="comment">
+              <div class="avatar" style="background:#2f6b63" aria-hidden="true">经</div>
+              <div>
+                <div class="who"><b>大轮寺扫地人</b> · 11-04 09:12 · 指向条目 #027</div>
+                <p>小无相功能模拟内功路数这点，原文写得很细，但每次看到有人拿它当战力翻倍器就头疼。虚竹听出来的重点是“根基不对”，不是“招式不对”。</p>
+              </div>
+            </article>
+            <article class="comment">
+              <div class="avatar" style="background:#b8862b" aria-hidden="true">版</div>
+              <div>
+                <div class="who"><b>两版对照党</b> · 11-02 16:55 · 指向条目 #031</div>
+                <p>新修版把来源补明确之后，这个人物的动机清楚多了。三联版读起来像半路捡到宝，新修版更像长期的搜求计划。谈不上哪个更好，但讨论时得说明用的是哪版。</p>
+              </div>
+            </article>
+            <article class="comment">
+              <div class="avatar" style="background:#6b7280" aria-hidden="true">论</div>
+              <div>
+                <div class="who"><b>路过看热闹</b> · 11-01 22:03</div>
+                <p>说实话我对战力排名兴趣不大，倒是觉得这角色的“目标落空”写得有意思。抢经没抢到，抢人抢到了，最后内力还被吸走，一圈下来什么都没留下。</p>
+              </div>
+            </article>
+            <article class="comment">
+              <div class="avatar" style="background:#7a5a12" aria-hidden="true">武</div>
+              <div>
+                <div class="who"><b>少林墙外听经</b> · 10-30 11:26 · 指向条目 #044</div>
+                <p>少林段我总觉得被低估了。鸠摩智当场能拆招，说明招式层面他确实下过功夫，只是内功体系撑着，才没当场垮掉。这一点比单纯说他假要复杂。</p>
+              </div>
+            </article>
+            <article class="comment">
+              <div class="avatar" style="background:#3d4553" aria-hidden="true">疑</div>
+              <div>
+                <div class="who"><b>存疑派</b> · 10-28 19:47 · 指向条目 #019</div>
+                <p>火焰刀威力上限这段，原文两处描写侧重确实不一样。我倾向于认为作者没打算给一个统一数值，硬要排顺序反而不像在读小说。</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 相关资讯 -->
+        <section class="block" id="news" aria-labelledby="news-h">
+          <div class="block-head">
+            <h2 id="news-h">相关资讯</h2>
+            <span class="more-link">条目动态</span>
+          </div>
+          <ul class="news">
+            <li>
+              <time datetime="2026-11-07">11-07</time>
+              <div class="n-body">
+                <a class="n-title" href="/#deep">火焰刀对照表补入参合指与劈空掌两组样本</a>
+                <p class="n-sum">统一按攻击距离、收势速度两项记录，未涉及胜负排序。</p>
+              </div>
+            </li>
+            <li>
+              <time datetime="2026-11-05">11-05</time>
+              <div class="n-body">
+                <a class="n-title" href="/#comments">评论筛选规则调整：带条目编号的进入核验区</a>
+                <p class="n-sum">核验区只做出处核对，不改变评论本身的立场。</p>
+              </div>
+            </li>
+            <li>
+              <time datetime="2026-11-01">11-01</time>
+              <div class="n-body">
+                <a class="n-title" href="/#faq">常见疑问新增“两版该以哪版为准”一问</a>
+                <p class="n-sum">答案按所引版本区分，不合并两版情节。</p>
+              </div>
+            </li>
+            <li>
+              <time datetime="2026-10-26">10-26</time>
+              <div class="n-body">
+                <a class="n-title" href="/#guide">六步读法附回目页码，方便逐段对照</a>
+                <p class="n-sum">页码以常见排印本为准，不同印次可能有小幅偏移。</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 相关推荐 -->
+        <section class="block" id="reco" aria-labelledby="reco-h">
+          <div class="block-head">
+            <h2 id="reco-h">相关推荐</h2>
+          </div>
+          <div class="rec-tags">
+            <a href="/#picks">天龙寺六脉神剑之战</a>
+            <a href="/#deep">小无相功来历版本差异</a>
+            <a href="/#deep">火焰刀与劈空掌对照</a>
+            <a href="/#faq">鸠摩智走火入魔原因</a>
+            <a href="/#rank">天龙八部战力对照表</a>
+            <a href="/#guide">吐蕃国师行动路线</a>
+            <a href="/#picks">少林七十二绝技演武</a>
+            <a href="/#deep">易筋经去向条目</a>
+            <a href="/#comments">角色结局争议讨论</a>
+            <a href="/#updates">新修版改动汇总</a>
+          </div>
+        </section>
+
+        <!-- 补充板块：榜单 -->
+        <section class="block" id="rank" aria-labelledby="rank-h">
+          <div class="block-head">
+            <h2 id="rank-h">条目热度榜</h2>
+            <span class="more-link">按 30 天访问</span>
+          </div>
+          <ol class="rank">
+            <li>
+              <div><span class="r-title">小无相功来源两版对照</span><span class="r-note">条目 #031 · 含逐句并置</span></div>
+              <span class="r-count">4,182</span>
+            </li>
+            <li>
+              <div><span class="r-title">天龙寺一战胜负条件</span><span class="r-note">条目 #012 · 时间轴版</span></div>
+              <span class="r-count">3,764</span>
+            </li>
+            <li>
+              <div><span class="r-title">火焰刀攻击距离记录</span><span class="r-note">条目 #007 · 三组样本</span></div>
+              <span class="r-count">3,251</span>
+            </li>
+            <li>
+              <div><span class="r-title">少林演武被点破的细节</span><span class="r-note">条目 #044</span></div>
+              <span class="r-count">2,896</span>
+            </li>
+            <li>
+              <div><span class="r-title">走火入魔前的练功顺序</span><span class="r-note">条目 #052</span></div>
+              <span class="r-count">2,410</span>
+            </li>
+          </ol>
+        </section>
+
+      </div>
+
+      <!-- 侧栏 -->
+      <aside class="side-col" aria-label="辅助导航与数据">
+
+        <div class="side-card">
+          <h2>频道导航</h2>
+          <ul class="side-nav" id="sideNav">
+            <li><a href="/#overview">人物概览</a></li>
+            <li><a href="/#picks">精选内容推荐</a></li>
+            <li><a href="/#updates">最新更新</a></li>
+            <li><a href="/#categories">分类入口</a></li>
+            <li><a href="/#deep">深度解析</a></li>
+            <li><a href="/#guide">体验指南</a></li>
+            <li><a href="/#faq">常见疑问</a></li>
+            <li><a href="/#comments">用户评论</a></li>
+            <li><a href="/#news">相关资讯</a></li>
+            <li><a href="/#rank">条目热度榜</a></li>
+          </ul>
+        </div>
+
+        <div class="side-card">
+          <h2>条目完整度</h2>
+          <div class="score-box">
+            <span class="score-num">78</span>
+            <div>
+              <div class="score-bar"><span></span></div>
+              <p class="score-meta">46 条中 36 条已附回目出处</p>
+            </div>
+          </div>
+          <p class="side-note" style="margin-top:12px">未附出处的 10 条标为待核对，评论区的转述说法不计入完整度。</p>
+        </div>
+
+        <div class="side-card">
+          <h2>近期核对</h2>
+          <ul class="side-list">
+            <li><span class="s-tag">已核</span><a href="/#deep">枯荣焚经的回目位置</a></li>
+            <li><span class="s-tag">已核</span><a href="/#faq">虚竹点破内功的原句</a></li>
+            <li><span class="s-tag">待核</span><a href="/#comments">“打遍天龙无敌手”出处</a></li>
+            <li><span class="s-tag">待核</span><a href="/#deep">小无相功新修版页码</a></li>
+            <li><span class="s-tag">已核</span><a href="/#guide">吐蕃国师称谓首次出现</a></li>
+          </ul>
+        </div>
+
+        <div class="side-card">
+          <h2>互动</h2>
+          <p class="side-note" style="margin-bottom:12px">有原文页码或版本差异，可直接在对应条目下留言，带条目编号的会进入核验区。</p>
+          <a class="btn btn-ghost" href="/#comments" style="font-size:.85rem;padding:9px 18px">去评论区</a>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="fbrand">
+        <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <rect width="40" height="40" rx="9" fill="#3a332d"/>
+          <path d="M11 29V11h5l4 9 4-9h5v18h-5v-9l-4 9-4-9v9z" fill="#e6b34a"/>
+          <circle cx="32" cy="8" r="3" fill="#8c2f1e"/>
+        </svg>
+        <span>鸠摩智性吧</span>
+      </div>
+      <p>把一部小说里的一个人物拆成回目、版本与战例，逐条核对出处，争议说法单列。</p>
+      <p>条目按三联版与新修版分别标注，页码随印次可能偏移。</p>
+    </div>
+    <div>
+      <h3>内容频道</h3>
+      <ul>
+        <li><a href="/#picks">天龙寺夺经战</a></li>
+        <li><a href="/#deep">火焰刀拆解</a></li>
+        <li><a href="/#deep">小无相功考据</a></li>
+        <li><a href="/#guide">身份与外交</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>方法与规则</h3>
+      <ul>
+        <li><a href="/#deep">版本对照说明</a></li>
+        <li><a href="/#comments">评论核验规则</a></li>
+        <li><a href="/#faq">常见疑问</a></li>
+        <li><a href="/#rank">热度统计口径</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>更新与联系</h3>
+      <ul>
+        <li><a href="/#updates">更新日志</a></li>
+        <li><a href="/#news">条目动态</a></li>
+        <li><a href="/#comments">提交页码线索</a></li>
+      </ul>
+      <p style="margin-top:10px">页面更新时间：2026-11-08</p>
+    </div>
+  </div>
+  <div class="footer-inner" style="display:block">
+    <div class="disclaimer">
+      示例数据说明：条目编号、评论、热度数值与部分更新日期为演示用途生成，原文回目引用以常见排印本为准，阅读时请自行核对所用版本。本站不提供原著全文。
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 鸠摩智性吧 · 内容整理与讨论</span>
+    <span>本站为作品角色讨论站点，与著作权人无关</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">↑</button>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"鸠摩智性吧",
+  "description":"聚焦鸠摩智的人物动机、武功来历与版本差异，条目按回目核对。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"火焰刀和六脉神剑哪一边优势更大？",
+      "acceptedAnswer":{"@type":"Answer","text":"火焰刀优势在距离与点穴精度，六脉神剑优势在剑气成形密度。天龙寺一战里鸠摩智选在五本未结阵时出手，原文未写双方全力对轰的结果，比较需分项看。"}
+    },
+    {
+      "@type":"Question",
+      "name":"为什么说鸠摩智的七十二绝技不完全是假的？",
+      "acceptedAnswer":{"@type":"Answer","text":"招式是他实际练过的，被指出的是内功根基。虚竹听出运劲路数不是少林一路，这与招式造假是两回事。"}
+    },
+    {
+      "@type":"Question",
+      "name":"小无相功能不能算作战力加成？",
+      "acceptedAnswer":{"@type":"Answer","text":"原文里它的主要作用是模拟与伪装，让不同路数内功看起来像同一体系。加成说缺乏文本支撑，也解释不了后面的身体隐患。"}
+    },
+    {
+      "@type":"Question",
+      "name":"走火入魔是突然发生的吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"不是。多功并修的隐患在少林段之前已有铺垫，少林演武是暴露点。练功顺序与内功根基不匹配，是更前的原因。"}
+    },
+    {
+      "@type":"Question",
+      "name":"三联版和新修版该以哪版为准？",
+      "acceptedAnswer":{"@type":"Answer","text":"讨论具体情节时以所引版本为准并注明回目。两版在小无相功来源上的交代不同，混用会得出互相矛盾的动机解释。"}
+    },
+    {
+      "@type":"Question",
+      "name":"枯井之后他的转变怎么理解？",
+      "acceptedAnswer":{"@type":"Answer","text":"内力尽失后角色从主动搜求转为被动收束，原文留白较多。评论区分歧集中在顿悟还是无奈，两种读法都有支持者。"}
+    }
+  ]
+}
+</script>
+
+<script>
+(function(){
+  var menuBtn = document.getElementById('menuBtn');
+  var nav = document.getElementById('mainNav');
+  if(menuBtn && nav){
+    menuBtn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 960){
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  // 搜索
+  var input = document.getElementById('siteSearch');
+  var msg = document.getElementById('searchMsg');
+  var indexItems = [];
+  document.querySelectorAll('main h2, main h3, main .up-title, main .n-title, main .r-title, main .cat-item strong, main .ans, main .rank .r-title').forEach(function(el){
+    var text = (el.textContent || '').trim();
+    if(text.length > 2){
+      var target = el.closest('section');
+      indexItems.push({text:text.toLowerCase(), raw:text, id: target ? target.id : ''});
+    }
+  });
+  function doSearch(){
+    var q = (input.value || '').trim().toLowerCase();
+    if(!q){ msg.classList.remove('show'); msg.textContent=''; return; }
+    var hits = indexItems.filter(function(it){ return it.text.indexOf(q) !== -1; });
+    // 去重
+    var seen = {}, uniq = [];
+    hits.forEach(function(h){ if(!seen[h.raw]){ seen[h.raw]=1; uniq.push(h); } });
+    if(uniq.length){
+      msg.textContent = '找到 ' + uniq.length + ' 条相关条目：' + uniq.slice(0,4).map(function(u){return u.raw;}).join('、');
+    } else {
+      msg.textContent = '没有找到与“' + input.value.trim() + '”相关的条目，可试试“火焰刀”“小无相功”“天龙寺”。';
+    }
+    msg.classList.add('show');
+  }
+  if(input){
+    input.addEventListener('input', doSearch);
+    input.addEventListener('keydown', function(e){
+      if(e.key === 'Escape'){ input.value=''; msg.classList.remove('show'); }
+    });
+  }
+  document.addEventListener('click', function(e){
+    if(msg && !msg.contains(e.target) && e.target !== input){ msg.classList.remove('show'); }
+  });
+
+  // 侧栏滚动高亮
+  var sideLinks = [].slice.call(document.querySelectorAll('#sideNav a'));
+  var sections = sideLinks.map(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  });
+  function updateActive(){
+    var pos = window.scrollY + 180;
+    var current = -1;
+    sections.forEach(function(sec, i){
+      if(sec && sec.offsetTop <= pos) current = i;
+    });
+    sideLinks.forEach(function(a, i){
+      a.classList.toggle('active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActive, {passive:true});
+  updateActive();
+
+  // 回到顶部
+  var toTop = document.getElementById('toTop');
+  function toggleTop(){
+    if(window.scrollY > 520){ toTop.classList.add('show'); }
+    else{ toTop.classList.remove('show'); }
+  }
+  window.addEventListener('scroll', toggleTop, {passive:true});
+  toggleTop();
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+  </html>
