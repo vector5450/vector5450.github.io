@@ -1,0 +1,1109 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eeuss影院免费在线看-片源筛选与观影指南</title>
+<meta name="description" content="eeuss影院免费在线看提供片源筛选、清晰度对比、字幕版本与播放体验说明，整理剧情片、纪录片、动画短片、经典修复等入口，并附检索方法、常见播放问题与观众实测记录。">
+<meta name="keywords" content="eeuss影院免费在线看">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141b2e'/%3E%3Crect x='10' y='22' width='30' height='20' rx='3' fill='%23f2b544'/%3E%3Ccircle cx='19' cy='32' r='4' fill='%23141b2e'/%3E%3Ccircle cx='31' cy='32' r='4' fill='%23141b2e'/%3E%3Cpath d='M44 24l10-6v28l-10-6z' fill='%23e8624a'/%3E%3C/svg%3E">
+<style>
+:root{
+--ink:#141b2e;
+--ink-2:#2b3550;
+--paper:#f6f4ef;
+--card:#ffffff;
+--line:#dcd8cf;
+--muted:#6b7080;
+--gold:#f2b544;
+--gold-deep:#c98a12;
+--coral:#e8624a;
+--teal:#2c7a72;
+--r-s:6px;
+--r-m:12px;
+--r-l:20px;
+--sh-s:0 1px 2px rgba(20,27,46,.06),0 1px 1px rgba(20,27,46,.04);
+--sh-m:0 6px 20px rgba(20,27,46,.09);
+--fs-1:clamp(1.75rem,4vw,2.6rem);
+--fs-2:clamp(1.28rem,2.4vw,1.6rem);
+--fs-3:1.1rem;
+--fs-b:.97rem;
+--fs-s:.86rem;
+--sp:clamp(14px,2vw,22px);
+--maxw:1180px;
+--announce-h:40px;
+--head-h:64px;
+--anchor:calc(var(--announce-h) + var(--head-h) + 14px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+margin:0;background:var(--paper);color:var(--ink);
+font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,sans-serif;
+line-height:1.75;font-size:16px;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{margin:0;line-height:1.3;font-weight:800;letter-spacing:.01em}
+p{margin:0 0 .85em}
+ul,ol{margin:0 0 .9em;padding-left:1.2em}
+li{margin-bottom:.35em}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--coral);outline-offset:2px;border-radius:4px}
+section{scroll-margin-top:var(--anchor)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--sp)}
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:10px 16px;z-index:99}
+.skip:focus{left:8px;top:8px}
+
+/* ===== 吸顶区 ===== */
+.pinzone{position:sticky;top:0;z-index:50}
+.announce{
+height:var(--announce-h);display:flex;align-items:center;
+background:var(--ink);color:#f3eedf;font-size:var(--fs-s);
+}
+.announce .wrap{display:flex;align-items:center;gap:10px;overflow:hidden;white-space:nowrap}
+.announce .dot{width:7px;height:7px;border-radius:50%;background:var(--coral);flex:none}
+.announce b{color:var(--gold);font-weight:700}
+.announce .tail{color:#a8adbd;overflow:hidden;text-overflow:ellipsis}
+header.pagehead{
+background:rgba(246,244,239,.96);backdrop-filter:blur(8px);
+border-bottom:1px solid var(--line);height:var(--head-h);
+}
+.pagehead .wrap{height:100%;display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:9px;flex:none}
+.brand svg{width:32px;height:32px;flex:none}
+.brand .bname{font-weight:900;font-size:1.02rem;letter-spacing:.02em;white-space:nowrap}
+nav.mainnav{margin-left:auto;display:flex;align-items:center;gap:4px}
+nav.mainnav a{
+padding:7px 11px;border-radius:var(--r-s);font-size:.92rem;color:var(--ink-2);
+transition:background .18s,color .18s;white-space:nowrap;
+}
+nav.mainnav a:hover{background:#e9e4d8;color:var(--ink)}
+.head-tools{display:flex;align-items:center;gap:8px;flex:none}
+.searchbox{display:flex;align-items:center;border:1px solid var(--line);background:#fff;border-radius:999px;padding:0 4px 0 12px;height:36px}
+.searchbox input{border:0;outline:0;background:transparent;width:132px;font-size:.88rem;color:var(--ink)}
+.searchbox input::placeholder{color:#9a9ea9}
+.searchbox button{border:0;background:var(--ink);color:#fff;border-radius:999px;height:28px;padding:0 12px;font-size:.82rem}
+.menu-btn{display:none;border:1px solid var(--line);background:#fff;border-radius:var(--r-s);width:38px;height:36px;align-items:center;justify-content:center}
+.menu-btn span{display:block;width:16px;height:2px;background:var(--ink);position:relative}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0;width:16px;height:2px;background:var(--ink)}
+.menu-btn span::before{top:-5px}.menu-btn span::after{top:5px}
+.searchmsg{font-size:.86rem;color:var(--coral);padding:4px 0 0;display:none}
+.searchmsg.on{display:block}
+
+/* ===== 首屏 ===== */
+.hero{padding:clamp(28px,4.5vw,56px) 0 clamp(26px,4vw,46px);position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(20px,3vw,44px);align-items:center}
+.hero .kick{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;letter-spacing:.14em;color:var(--teal);font-weight:700;text-transform:uppercase;margin-bottom:12px}
+.hero .kick::before{content:"";width:26px;height:2px;background:var(--teal)}
+.hero h1{font-size:var(--fs-1);letter-spacing:.01em;margin-bottom:14px}
+.hero h1 em{font-style:normal;color:var(--coral)}
+.hero .lead{font-size:1.02rem;color:var(--ink-2);max-width:36em}
+.hero .lead b{color:var(--ink);border-bottom:2px solid var(--gold)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;font-weight:700;font-size:.94rem;border:1px solid transparent;transition:transform .18s,box-shadow .18s,background .18s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--ink);color:#fff;box-shadow:var(--sh-s)}
+.btn-primary:hover{box-shadow:var(--sh-m)}
+.btn-ghost{background:#fff;border-color:var(--line);color:var(--ink)}
+.hero-stats{display:flex;gap:26px;margin-top:26px;flex-wrap:wrap}
+.hero-stats div{min-width:74px}
+.hero-stats b{display:block;font-size:1.32rem;font-weight:900;color:var(--ink);line-height:1.2}
+.hero-stats span{font-size:.78rem;color:var(--muted)}
+.hero-art{position:relative;aspect-ratio:1/.92;min-height:260px}
+.art-frame{position:absolute;inset:0;background:var(--ink);border-radius:var(--r-l);overflow:hidden;box-shadow:var(--sh-m)}
+.art-frame svg{width:100%;height:100%;display:block}
+.art-card{position:absolute;background:#fff;border-radius:var(--r-m);box-shadow:var(--sh-m);padding:11px 14px;font-size:.8rem;line-height:1.45}
+.art-card b{display:block;font-size:.86rem}
+.art-card.c1{left:-12px;bottom:22%;max-width:172px}
+.art-card.c2{right:-10px;top:9%;max-width:158px;border-left:3px solid var(--gold)}
+.art-card .tagline{color:var(--muted);font-size:.74rem}
+
+/* ===== 通用板块 ===== */
+main{padding-bottom:8px}
+.sec{padding:clamp(26px,3.6vw,42px) 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.sec-head h2{font-size:var(--fs-2)}
+.sec-head .sub{color:var(--muted);font-size:var(--fs-s);max-width:44em;margin-top:5px}
+.chip-link{font-size:.84rem;color:var(--teal);font-weight:700;border-bottom:1px solid rgba(44,122,114,.35);white-space:nowrap}
+.chip-link:hover{color:var(--coral);border-color:var(--coral)}
+
+/* 三栏门户 */
+.portal{display:grid;grid-template-columns:2.1fr 1fr 1fr;gap:var(--sp)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);padding:18px;box-shadow:var(--sh-s)}
+.panel h3{font-size:1rem;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.panel h3::before{content:"";width:4px;height:15px;background:var(--gold);border-radius:2px}
+.feat-card{display:grid;grid-template-columns:150px 1fr;gap:14px;align-items:start}
+.feat-card img{width:150px;height:100px;object-fit:cover;border-radius:var(--r-s)}
+.feat-card h4{font-size:1.06rem;margin-bottom:6px}
+.meta{font-size:.76rem;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.meta .v{color:var(--coral);font-weight:700}
+.mini-list{list-style:none;padding:0;margin:0;font-size:.88rem}
+.mini-list li{display:flex;gap:8px;padding:7px 0;border-bottom:1px dashed #e8e3d7;line-height:1.5;margin:0}
+.mini-list li:last-child{border-bottom:0}
+.mini-list .n{color:var(--gold-deep);font-weight:800;font-size:.8rem;flex:none;width:1.3em}
+.mini-list .d{margin-left:auto;color:#9a9ea9;font-size:.72rem;flex:none}
+
+/* 网格卡片 */
+.grid-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);overflow:hidden;box-shadow:var(--sh-s);display:flex;flex-direction:column;transition:transform .18s,box-shadow .18s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--sh-m)}
+.card img{width:100%;height:148px;object-fit:cover}
+.card .cb{padding:14px 15px 16px;display:flex;flex-direction:column;flex:1}
+.card h3{font-size:1rem;margin-bottom:6px}
+.card p{font-size:.86rem;color:var(--ink-2);margin-bottom:10px}
+.card .cfoot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;font-size:.76rem;color:var(--muted)}
+.pill{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 9px;border-radius:999px;background:#f0ecdf;color:var(--gold-deep)}
+.pill.t{background:#e5f1ef;color:var(--teal)}
+.pill.c{background:#fbe9e5;color:var(--coral)}
+
+/* 分类索引标签 */
+.tag-index{display:flex;flex-wrap:wrap;gap:9px}
+.tag-index a{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:.88rem;transition:background .16s,color .16s,border-color .16s}
+.tag-index a:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.tag-index small{color:var(--muted);font-size:.72rem}
+.tag-index a:hover small{color:#c8cbd4}
+
+/* 双栏正文 + 侧栏 */
+.split{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:clamp(20px,3vw,38px);align-items:start}
+.article-body h3{font-size:1.14rem;margin:22px 0 8px}
+.article-body h3:first-child{margin-top:0}
+.article-body p{font-size:.96rem;color:var(--ink-2)}
+.quote{background:#fff;border-left:4px solid var(--coral);border-radius:0 var(--r-s) var(--r-s) 0;padding:14px 18px;margin:18px 0;box-shadow:var(--sh-s)}
+.quote p{margin:0;color:var(--ink);font-weight:600}
+.quote cite{display:block;font-size:.78rem;color:var(--muted);font-style:normal;margin-top:6px}
+.datatable{width:100%;border-collapse:collapse;font-size:.85rem;margin:14px 0;background:#fff;border-radius:var(--r-s);overflow:hidden;box-shadow:var(--sh-s)}
+.datatable th,.datatable td{border-bottom:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+.datatable th{background:#efeade;font-weight:700;font-size:.8rem;color:var(--ink)}
+.datatable td b{color:var(--teal)}
+.facts{border:1px dashed var(--gold-deep);background:#fdf8ea;border-radius:var(--r-m);padding:14px 16px;margin:16px 0}
+.facts h4{font-size:.92rem;margin-bottom:8px}
+.facts li{font-size:.86rem;color:var(--ink-2)}
+.sidebar{position:sticky;top:var(--anchor);display:flex;flex-direction:column;gap:16px}
+.side-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-m);padding:16px;box-shadow:var(--sh-s)}
+.side-card h3{font-size:.95rem;margin-bottom:10px}
+.side-nav{list-style:none;padding:0;margin:0;font-size:.87rem}
+.side-nav a{display:block;padding:6px 10px;border-radius:var(--r-s);color:var(--ink-2);border-left:3px solid transparent;transition:background .15s,border-color .15s,color .15s}
+.side-nav a:hover{background:#f1ecdf}
+.side-nav a.active{background:#f1ecdf;border-left-color:var(--coral);color:var(--ink);font-weight:700}
+.side-note{font-size:.8rem;color:var(--muted);line-height:1.6}
+
+/* 步骤 */
+.steps{counter-reset:st;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:16px 16px 14px;position:relative;padding-left:52px;box-shadow:var(--sh-s)}
+.step::before{counter-increment:st;content:counter(st,decimal-leading-zero);position:absolute;left:15px;top:14px;font-weight:900;font-size:1.05rem;color:var(--coral)}
+.step h4{font-size:.95rem;margin-bottom:5px}
+.step p{font-size:.85rem;color:var(--ink-2);margin:0}
+
+/* 对照面板 */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;border:1px solid var(--line);border-radius:var(--r-m);overflow:hidden;box-shadow:var(--sh-s)}
+.compare>div{padding:16px 18px}
+.compare>div:first-child{border-right:1px solid var(--line);background:#fbf9f3}
+.compare h4{font-size:.94rem;margin-bottom:8px;display:flex;align-items:center;gap:7px}
+.compare ul{font-size:.85rem;color:var(--ink-2);margin:0}
+.compare .dotbad,.compare .dotgood{width:8px;height:8px;border-radius:50%;flex:none}
+.dotbad{background:var(--coral)}
+.dotgood{background:var(--teal)}
+
+/* FAQ */
+.faq{display:flex;flex-direction:column;gap:10px}
+details{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);box-shadow:var(--sh-s);overflow:hidden}
+details summary{list-style:none;cursor:pointer;padding:14px 44px 14px 16px;font-weight:700;font-size:.94rem;position:relative}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:1.2rem;color:var(--coral);font-weight:800}
+details[open] summary::after{content:"–"}
+details .fa{padding:0 16px 15px;font-size:.88rem;color:var(--ink-2)}
+details .fa p:last-child{margin:0}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.comment{background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:14px 16px;box-shadow:var(--sh-s)}
+.comment .who{display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--muted);margin-bottom:6px}
+.avatar{width:26px;height:26px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:800;flex:none}
+.comment p{font-size:.88rem;color:var(--ink-2);margin:0}
+.comment.neutral{background:#f7f6f1}
+.stars{color:var(--gold-deep);font-size:.78rem;letter-spacing:.1em}
+
+/* 资讯列表 */
+.news{list-style:none;padding:0;margin:0;background:#fff;border:1px solid var(--line);border-radius:var(--r-m);box-shadow:var(--sh-s);overflow:hidden}
+.news li{display:grid;grid-template-columns:86px 1fr auto;gap:12px;padding:13px 16px;border-bottom:1px solid #ece7db;align-items:baseline;margin:0}
+.news li:last-child{border-bottom:0}
+.news time{font-size:.78rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.news a{font-size:.9rem;font-weight:600}
+.news a:hover{color:var(--coral)}
+.news .kw{font-size:.72rem;color:var(--teal);white-space:nowrap}
+.news em{font-style:normal;font-size:.76rem;color:var(--muted);display:block;font-weight:400;margin-top:2px}
+
+/* 榜单 */
+.rank{counter-reset:rk;list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rank li{counter-increment:rk;background:#fff;border:1px solid var(--line);border-radius:var(--r-m);padding:12px 14px 12px 48px;position:relative;box-shadow:var(--sh-s);margin:0;font-size:.88rem}
+.rank li::before{content:"0" counter(rk);position:absolute;left:13px;top:11px;font-weight:900;color:var(--gold-deep);font-size:.9rem}
+.rank b{display:block;font-size:.92rem}
+.rank span{font-size:.78rem;color:var(--muted)}
+
+/* 时间线 */
+.timeline{list-style:none;padding:0 0 0 18px;margin:0;border-left:2px solid var(--line)}
+.timeline li{position:relative;padding:0 0 16px 18px;margin:0}
+.timeline li::before{content:"";position:absolute;left:-25px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--coral);border:2px solid var(--paper)}
+.timeline time{display:block;font-size:.76rem;color:var(--muted);font-weight:700}
+.timeline p{font-size:.88rem;margin:2px 0 0;color:var(--ink-2)}
+
+/* 推荐标签 */
+.rec-tags{display:flex;flex-wrap:wrap;gap:8px}
+.rec-tags a{font-size:.84rem;padding:6px 12px;border-radius:var(--r-s);background:#fff;border:1px solid var(--line);transition:border-color .16s,color .16s}
+.rec-tags a:hover{border-color:var(--coral);color:var(--coral)}
+
+/* 页脚 */
+footer{background:var(--ink);color:#cfd2dc;padding:clamp(30px,4vw,48px) 0 22px;margin-top:10px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px}
+footer .fbrand{display:flex;align-items:center;gap:9px;color:#fff;font-weight:900;font-size:1.02rem;margin-bottom:10px}
+footer .fbrand svg{width:30px;height:30px}
+footer .fpos{font-size:.86rem;line-height:1.7;color:#a9aec0;max-width:24em}
+footer h4{font-size:.86rem;color:#fff;margin-bottom:10px;letter-spacing:.05em}
+footer .flist{list-style:none;padding:0;margin:0;font-size:.84rem}
+footer .flist li{margin-bottom:7px}
+footer .flist a:hover{color:var(--gold)}
+.notice{font-size:.78rem;color:#8e93a5;border-top:1px solid #2b3550;margin-top:26px;padding-top:16px;line-height:1.7}
+.copyright{font-size:.78rem;color:#8e93a5;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:10px}
+
+/* 回顶 */
+.totop{position:fixed;right:16px;bottom:20px;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:#fff;box-shadow:var(--sh-m);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transform:translateY(8px);transition:opacity .2s,transform .2s;z-index:60}
+.totop.on{opacity:1;pointer-events:auto;transform:translateY(0)}
+.totop svg{width:18px;height:18px}
+
+/* ===== 响应式 ===== */
+@media(max-width:1000px){
+.portal{grid-template-columns:1fr 1fr}
+.portal .panel:first-child{grid-column:1/-1}
+.grid-cards{grid-template-columns:repeat(2,1fr)}
+.foot-grid{grid-template-columns:1.4fr 1fr 1fr}
+}
+@media(max-width:860px){
+nav.mainnav{
+position:absolute;left:0;right:0;top:calc(var(--announce-h) + var(--head-h));
+background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;
+padding:8px var(--sp) 14px;gap:2px;display:none;box-shadow:var(--sh-m);
+}
+nav.mainnav.open{display:flex}
+nav.mainnav a{padding:10px 8px;border-radius:var(--r-s);font-size:.95rem}
+.menu-btn{display:flex}
+.hero .wrap{grid-template-columns:1fr}
+.hero-art{max-width:420px;margin:6px auto 0;width:100%}
+.split{grid-template-columns:1fr}
+.sidebar{position:static}
+.steps{grid-template-columns:1fr}
+.news li{grid-template-columns:1fr;gap:4px}
+.news .kw{display:none}
+}
+@media(max-width:640px){
+:root{--announce-h:auto;--head-h:58px}
+.announce{height:auto;padding:7px 0;font-size:.76rem}
+.announce .wrap{white-space:normal;line-height:1.4}
+.pagehead .wrap{gap:10px}
+.brand .bname{font-size:.92rem}
+.brand svg{width:27px;height:27px}
+.searchbox input{width:88px}
+.portal,.grid-cards,.comments,.compare,.rank{grid-template-columns:1fr}
+.feat-card{grid-template-columns:1fr}
+.feat-card img{width:100%;height:170px}
+.compare>div:first-child{border-right:0;border-bottom:1px solid var(--line)}
+.foot-grid{grid-template-columns:1fr 1fr}
+.art-card.c1{left:0;bottom:12px;max-width:150px}
+.art-card.c2{right:0;top:6%;max-width:140px}
+.hero-stats{gap:18px}
+.totop{bottom:14px;right:12px;width:40px;height:40px}
+}
+@media(prefers-reduced-motion:reduce){
+html{scroll-behavior:auto}
+*{transition:none!important;animation:none!important}
+.card:hover,.btn:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<div class="pinzone">
+  <div class="announce" role="region" aria-label="站内更新公告">
+    <div class="wrap">
+      <span class="dot"></span>
+      <b>eeuss影院免费在线看</b>
+      <span class="tail">11月7日更新：修复《雾港纪事》第二集字幕轴偏移；新增“经典修复”频道 12 部片目。</span>
+    </div>
+  </div>
+  <header class="pagehead">
+    <div class="wrap">
+      <a class="brand" href="/#top" aria-label="eeuss影院免费在线看首页">
+        <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <rect width="64" height="64" rx="14" fill="#141b2e"/>
+          <rect x="9" y="21" width="30" height="22" rx="3" fill="#f2b544"/>
+          <circle cx="18.5" cy="32" r="4.2" fill="#141b2e"/>
+          <circle cx="30.5" cy="32" r="4.2" fill="#141b2e"/>
+          <path d="M42 23l12-7v32l-12-7z" fill="#e8624a"/>
+        </svg>
+        <span class="bname">eeuss影院免费在线看</span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainnav" aria-label="展开或收起导航菜单"><span></span></button>
+      <nav class="mainnav" id="mainnav" aria-label="主题导航">
+        <a href="/#overview">领域概览</a>
+        <a href="/#picked">本周精选</a>
+        <a href="/#fresh">最新更新</a>
+        <a href="/#channels">频道分类</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">观影指南</a>
+        <a href="/#faq">常见问题</a>
+      </nav>
+      <div class="head-tools">
+        <form class="searchbox" id="searchForm" role="search">
+          <label for="q" class="skip">站内搜索</label>
+          <input id="q" type="search" placeholder="搜片名 / 类型" autocomplete="off">
+          <button type="submit">查找</button>
+        </form>
+      </div>
+    </div>
+    <div class="wrap"><p class="searchmsg" id="searchMsg" role="status" aria-live="polite"></p></div>
+  </header>
+</div>
+
+<div id="top"></div>
+
+<main id="main">
+
+  <!-- 主题首屏 -->
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <span class="kick">免费在线观影 · 片源筛选</span>
+        <h1>eeuss影院免费在线看</h1>
+        <p class="lead">按清晰度、字幕版本与播放稳定性筛片。剧情长片、纪录短片、动画单元、经典修复四个片库并行，<b>收录 486 部可点播片目</b>，每部标注来源版本与最近一次修订时间，点开前就能知道值不值得等缓冲。</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="/#channels">进入频道分类
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="/#guide">先看观影指南</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>486</b><span>可点播片目</span></div>
+          <div><b>12</b><span>主题频道</span></div>
+          <div><b>7</b><span>字幕语种</span></div>
+          <div><b>11.7</b><span>最近修订日</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-frame">
+          <svg viewBox="0 0 400 380" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#1d2743"/><stop offset="1" stop-color="#0e1424"/>
+              </linearGradient>
+              <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#f2b544"/><stop offset="1" stop-color="#e8624a"/>
+              </linearGradient>
+            </defs>
+            <rect width="400" height="380" fill="url(#g1)"/>
+            <circle cx="316" cy="66" r="88" fill="#22305a" opacity=".7"/>
+            <circle cx="72" cy="310" r="110" fill="#1a2440" opacity=".9"/>
+            <rect x="46" y="118" width="196" height="132" rx="10" fill="#0a0f1c" stroke="#3a4a74" stroke-width="2"/>
+            <rect x="60" y="132" width="168" height="104" rx="5" fill="url(#g2)" opacity=".92"/>
+            <path d="M132 158l44 24-44 24z" fill="#141b2e"/>
+            <rect x="46" y="258" width="196" height="9" rx="4.5" fill="#2b3550"/>
+            <rect x="46" y="258" width="122" height="9" rx="4.5" fill="#f2b544"/>
+            <circle cx="168" cy="262" r="7" fill="#e8624a"/>
+            <g stroke="#4a5b8c" stroke-width="2" opacity=".8">
+              <line x1="268" y1="132" x2="356" y2="132"/>
+              <line x1="268" y1="158" x2="336" y2="158"/>
+              <line x1="268" y1="184" x2="352" y2="184"/>
+              <line x1="268" y1="210" x2="322" y2="210"/>
+            </g>
+            <g fill="#f2b544" opacity=".9">
+              <rect x="268" y="236" width="34" height="34" rx="6"/>
+              <rect x="310" y="236" width="34" height="34" rx="6" opacity=".55"/>
+              <rect x="268" y="278" width="76" height="10" rx="5" opacity=".4"/>
+            </g>
+          </svg>
+        </div>
+        <div class="art-card c1"><b>雾港纪事 · 第二集</b><span class="tagline">字幕轴已对齐 11.7</span></div>
+        <div class="art-card c2"><b>本周无缓冲率 93.4%</b><span class="tagline">基于 1,204 次点播采样</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1 领域概览 -->
+  <section class="sec" id="overview">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><h2>领域概览：免费在线观影都在看什么</h2>
+        <p class="sub">以四个片库的存量、更新节奏与播放形态为线索，说明这类站点实际提供的内容边界。</p></div>
+        <a class="chip-link" href="/#channels">看全部频道 →</a>
+      </div>
+      <div class="portal">
+        <div class="panel">
+          <h3>片库结构与存量</h3>
+          <div class="feat-card">
+            <img src="https://picsum.photos/seed/eeuss-library/300/200" width="300" height="200" loading="lazy" alt="片库索引界面示意，左侧为分类树，右侧为片目列表">
+            <div>
+              <div class="meta"><span class="v">四库并行</span><span>剧情长片 214 部</span><span>更新 11-07</span></div>
+              <h4>长片为主，短片补位</h4>
+              <p>剧情长片占存量 44%，纪录短片与动画单元合计 178 部，单集时长多在 8—26 分钟。经典修复库 94 部，以 1990—2005 年间的胶片转数字版本为主。</p>
+              <p style="font-size:.84rem;color:var(--muted);margin:0">片目按“首播年 + 版本号”二次排序，避免同名片重复出现在前列。</p>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>本周访问结构</h3>
+          <ul class="mini-list">
+            <li><span class="n">1</span><span>剧情长片点播 3,842 次</span><span class="d">11-06</span></li>
+            <li><span class="n">2</span><span>纪录短片 1,917 次</span><span class="d">11-06</span></li>
+            <li><span class="n">3</span><span>动画单元 1,306 次</span><span class="d">11-05</span></li>
+            <li><span class="n">4</span><span>经典修复 884 次</span><span class="d">11-05</span></li>
+            <li><span class="n">5</span><span>片单页跳转 2,145 次</span><span class="d">11-04</span></li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>播放形态记录</h3>
+          <ul class="mini-list">
+            <li><span class="n">·</span><span>标清 480P 为默认起播</span></li>
+            <li><span class="n">·</span><span>高清 720P 需手动切换</span></li>
+            <li><span class="n">·</span><span>字幕分内嵌与挂载两种</span></li>
+            <li><span class="n">·</span><span>支持 1.25 倍速回看</span></li>
+            <li><span class="n">·</span><span>缓存进度保留 7 天</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 精选内容推荐 -->
+  <section class="sec" id="picked">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><h2>本周精选：六部值得先看的片目</h2>
+        <p class="sub">按“版本可靠、字幕完整、近 30 天内有人复核”三条标准挑出，不按热度排。</p></div>
+        <a class="chip-link" href="/#fresh">换看最新更新 →</a>
+      </div>
+      <div class="grid-cards">
+        <article class="card">
+          <img src="https://picsum.photos/seed/eeuss-mistharbor/640/420" width="640" height="420" loading="lazy" alt="《雾港纪事》海雾中的码头长镜头">
+          <div class="cb">
+            <span class="pill c">剧情长片</span>
+            <h3>雾港纪事（2024）</h3>
+            <p>112 分钟，双线叙事。11 月 7 日修复了第二集字幕时间轴，原先 14 分 22 秒处的对白提前了 1.8 秒。</p>
+            <div class="cfoot"><span>720P · 中文字幕</span><span>11-07 复核</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/eeuss-tidewalker/640/420" width="640" height="420" loading="lazy" alt="《潮汐行者》纪录短片中退潮后的滩涂与脚印">
+          <div class="cb">
+            <span class="pill t">纪录短片</span>
+            <h3>潮汐行者 第 3 集</h3>
+            <p>26 分钟，跟拍滩涂巡护员一整天的劳作。原声保留方言，配中英双语挂载字幕。</p>
+            <div class="cfoot"><span>480P/720P 双档</span><span>11-05 复核</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/eeuss-papercrane/640/420" width="640" height="420" loading="lazy" alt="动画短片《纸鹤夜航》中的折纸鹤与夜灯">
+          <div class="cb">
+            <span class="pill">动画单元</span>
+            <h3>纸鹤夜航</h3>
+            <p>14 分钟定格动画，手写字幕卡共 9 张。10 月 31 日替换了片尾致谢名单版本。</p>
+            <div class="cfoot"><span>720P · 无删减</span><span>10-31 复核</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/eeuss-oldrail/640/420" width="640" height="420" loading="lazy" alt="经典修复《旧轨》中老式站台与蒸汽火车">
+          <div class="cb">
+            <span class="pill t">经典修复</span>
+            <h3>旧轨（1998 数字修复）</h3>
+            <p>胶片划痕逐帧修补，噪点减少但保留了原片颗粒感。修复说明与原始画面对照可查。</p>
+            <div class="cfoot"><span>720P · 4:3 原画幅</span><span>11-03 复核</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/eeuss-nightbus/640/420" width="640" height="420" loading="lazy" alt="《夜班巴士》夜戏中车厢内昏黄灯光">
+          <div class="cb">
+            <span class="pill c">剧情长片</span>
+            <h3>夜班巴士</h3>
+            <p>94 分钟，三组乘客在一夜之间交错。车载音响对白偏轻，建议开启挂载字幕。</p>
+            <div class="cfoot"><span>720P · 中文字幕</span><span>11-02 复核</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/eeuss-saltfield/640/420" width="640" height="420" loading="lazy" alt="纪录片《盐田三日》里成排盐田与反光水面">
+          <div class="cb">
+            <span class="pill">纪录短片</span>
+            <h3>盐田三日</h3>
+            <p>18 分钟，拍摄盐场换水工序。原片 4K 下转 720P，画面锐度比 480P 明显更高。</p>
+            <div class="cfoot"><span>720P · 中文字幕</span><span>11-01 复核</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 最新更新 -->
+  <section class="sec" id="fresh">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><h2>最新更新：近十天的修订与上架</h2>
+        <p class="sub">只记可核对的动作：片目上架、字幕替换、画质重转、错误修复。</p></div>
+      </div>
+      <ul class="news">
+        <li><time>11-07</time><a href="/#picked">《雾港纪事》第二集字幕轴偏移修复<em>原 14:22 对白提前 1.8 秒，替换为 v2.3 字幕文件</em></a><span class="kw">修复</span></li>
+        <li><time>11-07</time><a href="/#channels">“经典修复”频道新增 12 部片目<em>其中 9 部为 4:3 原画幅，3 部为 16:9 重构图版本</em></a><span class="kw">上架</span></li>
+        <li><time>11-06</time><a href="/#guide">《夜班巴士》音频增益调整<em>整体提升 3dB，对白段落不再被环境声压住</em></a><span class="kw">重转</span></li>
+        <li><time>11-05</time><a href="/#deep">《潮汐行者》第 3 集开放双语挂载字幕<em>中文字幕 412 行，英文字幕 398 行，行数差异来自方言处理</em></a><span class="kw">字幕</span></li>
+        <li><time>11-04</time><a href="/#picked">《纸鹤夜航》片尾致谢名单版本替换<em>补入 3 位定格动画师的姓名，时长增加 6 秒</em></a><span class="kw">修订</span></li>
+        <li><time>11-03</time><a href="/#channels">《旧轨》修复说明页上线<em>附 12 组原始画面与修复画面对照截图</em></a><span class="kw">文档</span></li>
+        <li><time>11-02</time><a href="/#rank">专题片单“一间屋子里的十个小时”加入 7 部片目<em>片长合计 9 小时 48 分，均为单场景叙事</em></a><span class="kw">片单</span></li>
+        <li><time>10-31</time><a href="/#faq">播放器起播失败提示文案改写<em>区分网络中断与片源缺失两种情形</em></a><span class="kw">体验</span></li>
+        <li><time>10-30</time><a href="/#channels">“动画单元”补齐 8 部短片的演职员表<em>此前仅显示导演与年份</em></a><span class="kw">补录</span></li>
+        <li><time>10-29</time><a href="/#comments">招募 20 名片源复核志愿者<em>参与核对字幕轴与画质档位，反馈期两周</em></a><span class="kw">互动</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4 分类入口 -->
+  <section class="sec" id="channels">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><h2>频道分类：按你能想起的词去找</h2>
+        <p class="sub">十二个频道以“题材 + 时长 + 版本形态”区分，名称尽量贴近日常搜索用语。</p></div>
+      </div>
+      <div class="tag-index">
+        <a href="/#channels">剧情长片 <small>214</small></a>
+        <a href="/#channels">纪录短片 <small>96</small></a>
+        <a href="/#channels">动画单元 <small>82</small></a>
+        <a href="/#channels">经典修复 <small>94</small></a>
+        <a href="/#channels">单场景叙事 <small>37</small></a>
+        <a href="/#channels">黑白影像 <small>28</small></a>
+        <a href="/#channels">方言原声 <small>41</small></a>
+        <a href="/#channels">公路与旅途 <small>33</small></a>
+        <a href="/#channels">职场与手艺 <small>46</small></a>
+        <a href="/#channels">家庭关系 <small>58</small></a>
+        <a href="/#channels">实验短片 <small>25</small></a>
+        <a href="/#channels">夜间题材 <small>30</small></a>
+      </div>
+      <p style="font-size:.86rem;color:var(--muted);margin-top:16px;max-width:62em">频道之间存在交叉，例如《夜班巴士》同时归入“剧情长片”“单场景叙事”“夜间题材”。交叉不重复计数，片库总量仍以 486 部为准。检索时输入频道名会返回该频道全部片目，输入片名则优先匹配版本号最高的那一条。</p>
+    </div>
+  </section>
+
+  <!-- 5 深度解析 + 侧栏 -->
+  <section class="sec" id="deep">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><h2>深度解析：免费片源的“可看”该怎么判定</h2>
+        <p class="sub">围绕一部具体片目的三次修订，拆开画质、字幕与音轨三条线。</p></div>
+      </div>
+      <div class="split">
+        <div class="article-body">
+          <h3>同一部片，三个版本：修的是什么</h3>
+          <p>《雾港纪事》在 10 月 18 日、11 月 1 日、11 月 7 日各修订一次，三次动作的性质完全不同。10 月 18 日是上架首发，片源为 720P，内嵌中文字幕，音轨为原始立体声。11 月 1 日把字幕从内嵌改成了挂载，文件版本标 v2.1，理由是内嵌字幕在 480P 档位下字边缘发糊。11 月 7 日又出了 v2.3，只改时间轴，把 14 分 22 秒的一段对白整体提前 1.8 秒。</p>
+          <p>这三次修订里，只有第三次是真正意义上的“错误修复”。前两次属于播放体验调整：内嵌换挂载，意味着换档位时字幕不会再被重新压缩；而时间轴偏移，属于字幕制作阶段就存在、直到有人逐句核对才暴露的问题。</p>
+
+          <h3>可核对的三组数字</h3>
+          <p>把三次修订的差异拆成可验证的项目，比笼统说“画质更好了”有用。下表的数字来自版本说明页与两次抽样点播。</p>
+          <table class="datatable">
+            <thead><tr><th>项目</th><th>v1.0（10-18）</th><th>v2.1（11-01）</th><th>v2.3（11-07）</th></tr></thead>
+            <tbody>
+              <tr><td>字幕形态</td><td>内嵌</td><td>挂载</td><td>挂载</td></tr>
+              <tr><td>字幕行数</td><td>—</td><td>736 行</td><td><b>736 行</b></td></tr>
+              <tr><td>首句对白出现</td><td>00:00:41</td><td>00:00:41</td><td><b>00:00:41</b></td></tr>
+              <tr><td>14:22 段落偏差</td><td>未记录</td><td>+1.8 秒</td><td><b>0</b></td></tr>
+              <tr><td>起播耗时（720P，三次均值）</td><td>4.6 秒</td><td>3.1 秒</td><td>3.0 秒</td></tr>
+            </tbody>
+          </table>
+          <p>起播耗时的差异主要来自挂载字幕：播放器不必先解出内嵌字幕层再起播，首帧到达更早。这条判断可以被反驳——如果同时换用更快的分发节点，耗时会同样下降，因此它只能算相关，不能直接算因果。</p>
+
+          <h3>判断一条免费片源值不值得看</h3>
+          <p>把“值不值得”拆成三个可以单独打分的维度，比给一个总分更实用。</p>
+          <div class="facts">
+            <h4>可拆分的核对结构</h4>
+            <ul>
+              <li><strong>版本层</strong>：是否有版本号与修订日期，是否写明改了什么。缺一项就降一档。</li>
+              <li><strong>字幕层</strong>：内嵌还是挂载；行数与对白句数是否匹配；方言段落是否标注说话人。</li>
+              <li><strong>音轨层</strong>：原始混音还是重混；对白电平与环境声的差值是否在 6dB 以上。</li>
+            </ul>
+          </div>
+          <p>按这三层看，《夜班巴士》在版本层合格（有 11 月 6 日的增益记录），字幕层合格，音轨层原本不合格——对白电平只比环境声高 3dB，调整后提升到 6.5dB。这条增益数据可以在片目页的音轨说明里核到，并非推测。</p>
+
+          <div class="quote">
+            <p>免费片源的主要损耗不在清晰度，而在字幕与音轨的二次处理痕迹。</p>
+            <cite>—— 对 12 部近 30 天内修订片目的复核记录，2026-11-07</cite>
+          </div>
+
+          <h3>三种说法的区分</h3>
+          <p>关于“经典修复”频道，站内出现过三种不同表述：事实是 11 月 7 日新增 12 部片目；官方版本说明的回应是，其中 3 部为 16:9 重构图、并非裁切；而“重构图会损失原画幅边缘信息”这一说法，目前只是观众转述，没有逐帧对比记录支撑。把它当作推测更稳妥。</p>
+          <p>同一条片目在不同板块承担不同信息层：《雾港纪事》在精选区出现，讲的是为什么值得先看；在更新列表出现，讲的是 11 月 7 日改了什么；在深度解析里出现，讲的是三个版本的差异怎么核对。三处不互相复述。</p>
+        </div>
+        <aside class="sidebar" aria-label="页面内导航与说明">
+          <div class="side-card">
+            <h3>本页栏目</h3>
+            <ul class="side-nav" id="sideNav">
+              <li><a href="/#overview">领域概览</a></li>
+              <li><a href="/#picked">本周精选</a></li>
+              <li><a href="/#fresh">最新更新</a></li>
+              <li><a href="/#channels">频道分类</a></li>
+              <li><a href="/#deep">深度解析</a></li>
+              <li><a href="/#guide">观影指南</a></li>
+              <li><a href="/#faq">常见问题</a></li>
+              <li><a href="/#comments">观众评论</a></li>
+              <li><a href="/#rank">榜单与时间线</a></li>
+              <li><a href="/#related">相关推荐</a></li>
+            </ul>
+          </div>
+          <div class="side-card">
+            <h3>复核样例说明</h3>
+            <p class="side-note">本页出现的版本号、字幕行数、起播耗时均为示例数据，用于说明核对方法，不代表任一真实平台的实际参数。日期以 2026-11-08 为参考点。</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 体验指南 -->
+  <section class="sec" id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><h2>观影指南：从打开页面到顺畅看完</h2>
+        <p class="sub">五步走完一部片，每一步都对应一个可观察的结果。</p></div>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h4>先用频道缩范围</h4>
+          <p>在十二个频道里选一到两个，例如“纪录短片 + 方言原声”，比直接在搜索框输泛词快得多。</p>
+        </div>
+        <div class="step">
+          <h4>打开片目页看版本行</h4>
+          <p>重点看修订日期与改动说明。只有日期、没写改了什么，先按低一档处理。</p>
+        </div>
+        <div class="step">
+          <h4>480P 起播，再切 720P</h4>
+          <p>480P 用来确认音画是否同步，720P 用来判断字幕边缘是否发糊，两次切换间隔 10 秒即可。</p>
+        </div>
+        <div class="step">
+          <h4>检查字幕与音轨</h4>
+          <p>开场三分钟内必有一句对白，用它核对字幕是否提前或滞后；对白被环境声压住就开挂载字幕。</p>
+        </div>
+        <div class="step">
+          <h4>记录问题再反馈</h4>
+          <p>把时间点写到秒，例如 14:22，反馈才可复现。志愿者复核期每两周一轮。</p>
+        </div>
+        <div class="step">
+          <h4>留在片单里下次再看</h4>
+          <p>缓存进度保留 7 天，跨设备不互通。长片建议一次看完，避免进度失效重找位置。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 对照面板 -->
+  <section class="sec" id="compare">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><h2>两种免费片源的体验差异</h2>
+        <p class="sub">以“内嵌字幕片源”和“挂载字幕片源”为对照对象，不谈优劣，只列可观察项。</p></div>
+      </div>
+      <div class="compare">
+        <div>
+          <h4><span class="dotbad"></span>内嵌字幕片源</h4>
+          <ul>
+            <li>字幕与画面同帧编码，切档位时字号可能重新压缩</li>
+            <li>无法关闭字幕，方言段落缺少说明层</li>
+            <li>起播需先解字幕层，11-01 前《雾港纪事》均值为 4.6 秒</li>
+            <li>文件体积偏小，弱网环境下更稳</li>
+          </ul>
+        </div>
+        <div>
+          <h4><span class="dotgood"></span>挂载字幕片源</h4>
+          <ul>
+            <li>字幕独立成文件，可切换语种与开关</li>
+            <li>行数可核对，736 行对应 736 句对白时最稳</li>
+            <li>起播更快，11-07 抽样均值 3.0 秒</li>
+            <li>字幕文件缺失时会出现无字幕画面，需回退版本</li>
+          </ul>
+        </div>
+      </div>
+      <p style="font-size:.86rem;color:var(--muted);margin-top:14px;max-width:60em">两组数据都来自同一条 720P 片源的抽样记录，采样次数各 30 次。弱网条件（下行低于 2Mbps）下，内嵌片源的平均缓冲次数反而少 1.4 次。</p>
+    </div>
+  </section>
+
+  <!-- 8 FAQ -->
+  <section class="sec" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><h2>常见问题：播放、字幕与版本</h2>
+        <p class="sub">按提问频率整理，答案只讲可验证的操作与现象。</p></div>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>打开片目后一直停在加载界面怎么办？</summary>
+          <div class="fa"><p>先区分两种情况：画面区域出现转圈但进度条不动，多为分发节点响应慢，换到 480P 档位通常 5 秒内起播；若提示“片源缺失”，则不是网络问题，需换同名的其他版本号。11 月 7 日的提示文案已把这两类分开显示。</p></div>
+        </details>
+        <details>
+          <summary>字幕比声音慢半句，能自己调吗？</summary>
+          <div class="fa"><p>挂载字幕支持 0.5 秒步进的偏移调整，字幕设置里可前后拉动。内嵌字幕无法调整，只能等版本修订。以《雾港纪事》为例，14 分 22 秒那段在 v2.1 时滞后 1.8 秒，v2.3 已归零。</p></div>
+        </details>
+        <details>
+          <summary>720P 和 480P 到底差在哪，值得多等缓冲吗？</summary>
+          <div class="fa"><p>差别主要在字幕边缘与暗部细节。480P 下挂载字幕的字缘会发虚，夜景戏的暗部层次压成一片；720P 下这两项明显改善。若片目本身是 1990 年代的胶片转数字版本，例如《旧轨》，720P 的提升集中在颗粒感保留，锐度变化不大。</p></div>
+        </details>
+        <details>
+          <summary>方言原声的片子有普通话字幕吗？</summary>
+          <div class="fa"><p>“方言原声”频道下的 41 部片目中，38 部配有中文字幕，其中 26 部标注了说话人。剩余 3 部只有英文字幕，片目页会明确写出语种，不会默认显示。</p></div>
+        </details>
+        <details>
+          <summary>缓存进度为什么换设备就没了？</summary>
+          <div class="fa"><p>进度保存在本地浏览器，保留 7 天，不跨设备同步。同一浏览器清理缓存后也会丢失。长片可在片目页记下时间点，重新打开后手动拖到该位置。</p></div>
+        </details>
+        <details>
+          <summary>看到字幕错字或时间轴问题该怎么反馈？</summary>
+          <div class="fa"><p>把片名、版本号、时间点（精确到秒）和错误原文一并写清楚。志愿者每两周集中复核一轮，10 月 29 日开始的这一轮计划核对 20 部片目的字幕轴。</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 观众评论 -->
+  <section class="sec" id="comments">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><h2>观众评论：关于具体片目的实测</h2>
+        <p class="sub">摘录自 10 月 30 日至 11 月 7 日的公开反馈，保留原意，个别错字照录。</p></div>
+      </div>
+      <div class="comments">
+        <div class="comment">
+          <div class="who"><span class="avatar">老</span><span>老周看片</span><span class="stars">★★★★☆</span></div>
+          <p>《雾港纪事》第二集 14 分那段我按秒对过，v2.3 确实对上了。但第七集还有一处提前，大概在 31 分 10 秒左右，没人报。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><span class="avatar">林</span><span>林间小径</span><span class="stars">★★★☆☆</span></div>
+          <p>《潮汐行者》第 3 集的双语字幕做得不错，方言那句直接标了说话人，比前两集省心。就是 480P 下字太小。</p>
+        </div>
+        <div class="comment neutral">
+          <div class="who"><span class="avatar">阿</span><span>阿岚</span><span class="stars">★★☆☆☆</span></div>
+          <p>《旧轨》说保留颗粒感，我看是保留得有点多，暗部噪点比修复前截图还密。修复说明页那 12 组对照只放了 4 组，剩下 8 组点不开。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><span class="avatar">苏</span><span>苏北盐工</span><span class="stars">★★★★★</span></div>
+          <p>《盐田三日》里的换水工序和我老家一样，720P 那版的盐田水面反光才看得清。18 分钟短，一口气看完。</p>
+        </div>
+        <div class="comment">
+          <div class="who"><span class="avatar">C</span><span>Clara_看</span><span class="stars">★★★☆☆</span></div>
+          <p>《夜班巴士》音轨调过之后对白清楚多了，之前开头那五分钟基本靠猜。这片子 94 分钟，节奏偏慢，不是所有人都吃得下。</p>
+        </div>
+        <div class="comment neutral">
+          <div class="who"><span class="avatar">程</span><span>程工</span><span class="stars">★★★☆☆</span></div>
+          <p>单场景叙事片单加了 7 部，片长加起来 9 小时 48 分，说实话一次性刷完会很累。分三次看更合适，尤其《一间屋子》那部 127 分钟的。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 相关资讯 -->
+  <section class="sec" id="news">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><h2>相关资讯：版本与规则的变动记录</h2>
+        <p class="sub">只收与片源质量、观看方式直接相关的变化。</p></div>
+      </div>
+      <ul class="news">
+        <li><time>11-07</time><a href="/#deep">字幕文件版本号规则调整<em>改为“主版本.修订号”，v2.3 指第 2 主版本第 3 次修订</em></a><span class="kw">规则</span></li>
+        <li><time>11-06</time><a href="/#compare">播放器默认起播档位由 720P 改为 480P<em>依据是弱网环境下的首帧到达率，480P 高 11 个百分点</em></a><span class="kw">播放</span></li>
+        <li><time>11-05</time><a href="/#channels">经典修复频道的画幅标注开始区分“原画幅”与“重构图”<em>首批涉及 12 部片目</em></a><span class="kw">标注</span></li>
+        <li><time>11-03</time><a href="/#faq">反馈模板新增“时间点”必填项<em>精确到秒，缺该项的反馈暂不入复核队列</em></a><span class="kw">流程</span></li>
+        <li><time>10-31</time><a href="/#guide">片单页支持按总时长筛选<em>分为 30 分钟内、30—90 分钟、90 分钟以上三档</em></a><span class="kw">片单</span></li>
+        <li><time>10-30</time><a href="/#comments">建议反馈区移至片目页底部<em>与评论区合并，减少来回跳转</em></a><span class="kw">布局</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 11 榜单 + 时间线（补充板块） -->
+  <section class="sec" id="rank">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><h2>榜单与时间线：近 30 天可复核的记录</h2>
+        <p class="sub">榜单按“字幕完整度 + 音轨清晰度”两项均分排序；时间线只列有明确日期的动作。</p></div>
+      </div>
+      <div class="split">
+        <div>
+          <h3 style="font-size:1.02rem;margin-bottom:12px">字幕与音轨双项榜（截至 11-08）</h3>
+          <ol class="rank">
+            <li><b>盐田三日</b><span>字幕 9.2 / 音轨 8.8</span></li>
+            <li><b>潮汐行者 第 3 集</b><span>字幕 9.0 / 音轨 8.6</span></li>
+            <li><b>雾港纪事 第二集</b><span>字幕 8.8 / 音轨 8.5</span></li>
+            <li><b>夜班巴士</b><span>字幕 8.4 / 音轨 8.6</span></li>
+            <li><b>纸鹤夜航</b><span>字幕 8.6 / 音轨 8.2</span></li>
+            <li><b>旧轨（1998 修复）</b><span>字幕 8.0 / 音轨 7.9</span></li>
+          </ol>
+        </div>
+        <div>
+          <h3 style="font-size:1.02rem;margin-bottom:12px">10-18 至 11-07 时间线</h3>
+          <ul class="timeline">
+            <li><time>10-18</time><p>《雾港纪事》v1.0 上架，内嵌字幕。</p></li>
+            <li><time>10-29</time><p>志愿者复核计划启动，首批 20 部。</p></li>
+            <li><time>11-01</time><p>字幕改挂载，版本 v2.1，记录行数 736。</p></li>
+            <li><time>11-03</time><p>《旧轨》修复说明页上线，首批 12 组对照。</p></li>
+            <li><time>11-06</time><p>《夜班巴士》音频增益 +3dB。</p></li>
+            <li><time>11-07</time><p>字幕轴偏移修复，版本 v2.3；经典修复新增 12 部。</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12 相关推荐 -->
+  <section class="sec" id="related">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><h2>相关推荐：按具体需求挑片</h2>
+        <p class="sub">十二条常用检索路径，点开直接落到对应频道或片单。</p></div>
+      </div>
+      <div class="rec-tags">
+        <a href="/#channels">20 分钟以内的纪录短片</a>
+        <a href="/#channels">方言原声带普通话字幕</a>
+        <a href="/#channels">1990 年代胶片修复</a>
+        <a href="/#channels">单场景叙事的剧情长片</a>
+        <a href="/#channels">黑白影像与噪点保留</a>
+        <a href="/#channels">夜间题材的城市片</a>
+        <a href="/#channels">定格动画短片</a>
+        <a href="/#channels">公路与旅途题材</a>
+        <a href="/#channels">职场与手艺纪录</a>
+        <a href="/#channels">家庭关系题材长片</a>
+        <a href="/#channels">实验短片合集</a>
+        <a href="/#channels">双字幕版本片目</a>
+      </div>
+      <h3 style="font-size:1.02rem;margin:24px 0 12px">片单推荐</h3>
+      <div class="grid-cards">
+        <article class="card">
+          <img src="https://picsum.photos/seed/eeuss-playlist-oneroom/640/420" width="640" height="420" loading="lazy" alt="片单“一间屋子里的十个小时”封面，室内窗光">
+          <div class="cb">
+            <span class="pill">片单</span>
+            <h3>一间屋子里的十个小时</h3>
+            <p>7 部单场景叙事片目，合计 9 小时 48 分。适合分三次看完，附每部的机位数量说明。</p>
+            <div class="cfoot"><span>7 部 · 单场景</span><span>11-02 更新</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/eeuss-playlist-night/640/420" width="640" height="420" loading="lazy" alt="片单“夜里的三十公里”封面，夜间公路车灯">
+          <div class="cb">
+            <span class="pill c">片单</span>
+            <h3>夜里的三十公里</h3>
+            <p>公路与夜间题材交叉的 9 部片目，其中 4 部为方言原声，2 部为黑白影像。</p>
+            <div class="cfoot"><span>9 部 · 夜间</span><span>10-29 更新</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/eeuss-playlist-craft/640/420" width="640" height="420" loading="lazy" alt="片单“手上的活计”封面，手艺人工作台">
+          <div class="cb">
+            <span class="pill t">片单</span>
+            <h3>手上的活计</h3>
+            <p>职场与手艺题材 11 部纪录短片，单集 8—26 分钟，全部配有中文字幕与演职员表。</p>
+            <div class="cfoot"><span>11 部 · 纪录</span><span>10-30 补录</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13 互动栏目 -->
+  <section class="sec" id="vote">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><h2>本周片源复核投票</h2>
+        <p class="sub">每人一票，选你认为最该先核对字幕轴的片目。结果每周日汇总，票数靠前的先入复核队列。</p></div>
+      </div>
+      <div class="panel" style="max-width:640px">
+        <h3>你最希望先复核哪一部</h3>
+        <form id="voteForm">
+          <div id="voteOptions" style="display:flex;flex-direction:column;gap:9px;font-size:.9rem;margin-bottom:14px">
+            <label><input type="radio" name="pick" value="雾港纪事 第七集（31:10 疑似提前）"> 雾港纪事 第七集（31:10 疑似提前）</label>
+            <label><input type="radio" name="pick" value="旧轨（暗部噪点与 12 组对照缺 8 组）"> 旧轨（暗部噪点与 12 组对照缺 8 组）</label>
+            <label><input type="radio" name="pick" value="潮汐行者 第 3 集（480P 字幕字号偏小）"> 潮汐行者 第 3 集（480P 字幕字号偏小）</label>
+            <label><input type="radio" name="pick" value="夜班巴士（开头五分钟对白电平）"> 夜班巴士（开头五分钟对白电平）</label>
+          </div>
+          <button class="btn btn-primary" type="submit">提交这一票</button>
+          <p id="voteMsg" role="status" aria-live="polite" style="font-size:.86rem;color:var(--teal);margin:12px 0 0"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="fbrand">
+          <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+            <rect width="64" height="64" rx="14" fill="#f2b544"/>
+            <rect x="9" y="21" width="30" height="22" rx="3" fill="#141b2e"/>
+            <circle cx="18.5" cy="32" r="4.2" fill="#f2b544"/>
+            <circle cx="30.5" cy="32" r="4.2" fill="#f2b544"/>
+            <path d="M42 23l12-7v32l-12-7z" fill="#e8624a"/>
+          </svg>
+          eeuss影院免费在线看
+        </div>
+        <p class="fpos">按版本号与修订日期管理片目，把字幕行数、音轨增益、起播耗时写成可核对的数据，供逐项对比。</p>
+      </div>
+      <div>
+        <h4>频道</h4>
+        <ul class="flist">
+          <li><a href="/#channels">剧情长片</a></li>
+          <li><a href="/#channels">纪录短片</a></li>
+          <li><a href="/#channels">动画单元</a></li>
+          <li><a href="/#channels">经典修复</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>栏目</h4>
+        <ul class="flist">
+          <li><a href="/#picked">本周精选</a></li>
+          <li><a href="/#fresh">最新更新</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#rank">榜单与时间线</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>使用</h4>
+        <ul class="flist">
+          <li><a href="/#guide">观影指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comments">观众评论</a></li>
+          <li><a href="/#vote">复核投票</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="notice">页面所涉片名、版本号、字幕行数、起播耗时、票数与评论均为示例数据，用于说明筛选与核对方法，不对应任何真实平台的实际片源或参数。参考时间 2026-11-08，页脚更新时间 11-08 对应正文“潮汐行者第 3 集字幕字号”与“雾港纪事第七集疑似偏移”两条待核项。</p>
+    <div class="copyright"><span>© 2026 eeuss影院免费在线看 · 内容示例</span><span>站内检索与投票在本地完成，不发送数据</span></div>
+  </div>
+</footer>
+
+<button class="totop" id="toTop" aria-label="回到页面顶部">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</button>
+
+<script>
+(function(){
+  "use strict";
+  var menuBtn=document.getElementById('menuBtn');
+  var nav=document.getElementById('mainnav');
+  if(menuBtn&&nav){
+    menuBtn.addEventListener('click',function(){
+      var open=nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded',open?'true':'false');
+    });
+    nav.addEventListener('click',function(e){
+      if(e.target.tagName==='A'){nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}
+    });
+  }
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&nav&&nav.classList.contains('open')){
+      nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.focus();
+    }
+  });
+
+  // 本地检索
+  var form=document.getElementById('searchForm');
+  var q=document.getElementById('q');
+  var msg=document.getElementById('searchMsg');
+  var index=[
+    {t:'雾港纪事',d:'剧情长片 720P 中文字幕 11-07 复核 字幕轴修复',to:'/#picked'},
+    {t:'潮汐行者',d:'纪录短片 第3集 双语挂载字幕 方言原声',to:'/#picked'},
+    {t:'纸鹤夜航',d:'动画单元 定格动画 14分钟 片尾致谢替换',to:'/#picked'},
+    {t:'旧轨',d:'经典修复 1998 胶片转数字 4:3 原画幅',to:'/#picked'},
+    {t:'夜班巴士',d:'剧情长片 单场景 94分钟 音频增益 3dB',to:'/#picked'},
+    {t:'盐田三日',d:'纪录短片 18分钟 盐场换水 720P',to:'/#picked'},
+    {t:'一间屋子里的十个小时',d:'片单 7部单场景叙事 合计9小时48分',to:'/#related'},
+    {t:'夜里的三十公里',d:'片单 9部公路与夜间题材 4部方言原声',to:'/#related'},
+    {t:'手上的活计',d:'片单 11部职场与手艺纪录短片',to:'/#related'},
+    {t:'方言原声',d:'频道 41部 38部有中文字幕 26部标注说话人',to:'/#channels'},
+    {t:'经典修复',d:'频道 94部 原画幅与重构图标注',to:'/#channels'},
+    {t:'字幕偏移',d:'常见问题 挂载字幕支持0.5秒步进调整',to:'/#faq'},
+    {t:'缓存进度',d:'常见问题 本地保存 7天 不跨设备',to:'/#faq'},
+    {t:'起播',d:'沉浸解析 起播耗时 480P默认 720P手动',to:'/#compare'}
+  ];
+  function runSearch(){
+    var term=(q.value||'').trim().toLowerCase();
+    if(!term){msg.textContent='输入片名、频道名或问题关键词，例如“夜班巴士”“方言原声”。';msg.style.color='#6b7080';msg.classList.add('on');return;}
+    var hits=index.filter(function(x){return (x.t+' '+x.d).toLowerCase().indexOf(term)>-1;});
+    if(!hits.length){msg.textContent='没有找到与“'+q.value.trim()+'”匹配的片目或频道，可换用“剧情长片”“纪录短片”“字幕”等更短的词。';msg.style.color='#e8624a';msg.classList.add('on');return;}
+    var names=hits.slice(0,4).map(function(x){return x.t;}).join('、');
+    msg.innerHTML='找到 '+hits.length+' 条：'+names+'。已跳转到最相关栏目的锚点。';
+    msg.style.color='#2c7a72';msg.classList.add('on');
+    var target=hits[0].to;
+    var id=target.split('#')[1];
+    var el=document.getElementById(id);
+    if(el){el.scrollIntoView({behavior:'smooth',block:'start'});}
+  }
+  if(form){form.addEventListener('submit',function(e){e.preventDefault();runSearch();});}
+
+  // 投票
+  var voteForm=document.getElementById('voteForm');
+  var voteMsg=document.getElementById('voteMsg');
+  if(voteForm){
+    voteForm.addEventListener('submit',function(e){
+      e.preventDefault();
+      var picked=voteForm.querySelector('input[name="pick"]:checked');
+      if(!picked){voteMsg.style.color='#e8624a';voteMsg.textContent='先选一部片目再提交。';return;}
+      voteMsg.style.color='#2c7a72';
+      voteMsg.textContent='已记下你的选择：'+picked.value+'。票数会在周日汇总，靠前的先入复核队列。';
+    });
+  }
+
+  // 回到顶部
+  var toTop=document.getElementById('toTop');
+  function onScroll(){
+    if(window.scrollY>420){toTop.classList.add('on');}else{toTop.classList.remove('on');}
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+  toTop.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  // 侧栏高亮
+  var links=Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var sections=links.map(function(a){return document.getElementById(a.getAttribute('href').split('#')[1]);}).filter(Boolean);
+  function highlight(){
+    var pos=window.scrollY+150;
+    var current=sections[0]||null;
+    sections.forEach(function(s){if(s.offsetTop<=pos){current=s;}});
+    links.forEach(function(a){
+      var id=a.getAttribute('href').split('#')[1];
+      a.classList.toggle('active',!!current&&current.id===id);
+    });
+  }
+  window.addEventListener('scroll',highlight,{passive:true});
+  window.addEventListener('resize',highlight);
+  highlight();
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"eeuss影院免费在线看",
+  "inLanguage":"zh-CN",
+  "description":"片源筛选、版本核对与免费在线观影指南，按字幕、音轨与画质分项说明。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "inLanguage":"zh-CN",
+  "mainEntity":[
+    {"@type":"Question","name":"打开片目后一直停在加载界面怎么办？","acceptedAnswer":{"@type":"Answer","text":"先区分两种情况：转圈但进度条不动多为分发节点响应慢，换到480P档位通常5秒内起播；若提示片源缺失则需换同名其他版本号。"}},
+    {"@type":"Question","name":"字幕比声音慢半句，能自己调吗？","acceptedAnswer":{"@type":"Answer","text":"挂载字幕支持0.5秒步进的偏移调整，可在字幕设置里前后拉动；内嵌字幕无法调整，只能等版本修订。"}},
+    {"@type":"Question","name":"720P和480P到底差在哪，值得多等缓冲吗？","acceptedAnswer":{"@type":"Answer","text":"差别主要在字幕边缘与暗部细节。480P下挂载字幕字缘发虚，夜景暗部层次被压缩；720P下明显改善。胶片转数字的老片提升集中在颗粒感保留。"}},
+    {"@type":"Question","name":"方言原声的片子有普通话字幕吗？","acceptedAnswer":{"@type":"Answer","text":"方言原声频道下41部片目中38部配有中文字幕，其中26部标注了说话人，剩余3部只有英文字幕。"}},
+    {"@type":"Question","name":"缓存进度为什么换设备就没了？","acceptedAnswer":{"@type":"Answer","text":"进度保存在本地浏览器，保留7天，不跨设备同步，清理缓存后也会丢失。"}},
+    {"@type":"Question","name":"看到字幕错字或时间轴问题该怎么反馈？","acceptedAnswer":{"@type":"Answer","text":"写清片名、版本号、精确到秒的时间点与错误原文。志愿者每两周集中复核一轮。"}}
+  ]
+}
+</script>
+</body>
+  </html>
